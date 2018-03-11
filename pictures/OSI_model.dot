@@ -1,0 +1,5 @@
+digraph OSI_model {
+	rankdir=TB
+	node [shape=record];
+		struct1 [shape=record, label="{{7|<f0> Application}|{6|<f1> Presentation}|{5|<f2> Session}|{4|<f3> Transport}|{3|<f4> Network}|{2|<f5> Logical}|{1|<f6> Physical}}"]
+}

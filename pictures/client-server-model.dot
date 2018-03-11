@@ -1,0 +1,18 @@
+digraph client_server_model {
+	{rank = same; "client" ; "server" ;}
+		node [style=filled,color=lightgrey];
+		"client" -> cs1 [label="Answer to the\nclient port", dir="both"]
+
+		cs1 [label="Communication\nSystem", shape=box, width=2]
+		"client" -> "server" [label="request"]
+
+		"server" -> cs2 [label="Request to\na WKP", dir="both"]
+		cs2 [label="Communication\nSystem", shape=box, width=2]
+		"server" -> "client" [label="reply"]
+		
+	cs1 -> "IP/ICMP" [dir="both"]
+	cs2 -> "IP/ICMP" [dir="both"]
+
+	"IP/ICMP" [shape=box, width="5"]
+}
+

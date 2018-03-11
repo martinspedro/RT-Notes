@@ -1,0 +1,17 @@
+digraph OSI_model {
+	graph [pad="0.5", nodesep="0.1"];
+	rankdir=LR;
+	node [shape=record];
+	struct1 [shape=record, label="<a0> Application|<a1> Presentation|<a2> Session|<a3> Transport|<a4> Network|<a5> Logical|<a6> Physical"]
+	struct2 [shape=record, label="<a0> Application|<a1> Presentation|<a2> Session|<a3> Transport|<a4> Network|<a5> Logical|<a6> Physical"]
+	struct3 [shape=record, label="<a4> Network|<a5> Logical|<a6> Physical"]
+
+		struct1:a0 -> struct2:a0 [dir=both]
+		struct1:a1 -> struct2:a1 [dir=both]
+		struct1:a2 -> struct2:a2 [dir=both]
+		struct1:a3 -> struct2:a3 [dir=both]
+		struct1:a4 -> struct3:a4 -> struct2:a4 [dir=both] 
+		struct1:a5 -> struct3:a5 -> struct2:a5 [dir=both] 
+		struct1:a6 -> struct3:a6 -> struct2:a6 [dir=both] 
+
+}
