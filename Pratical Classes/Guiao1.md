@@ -16,6 +16,11 @@ minicom
 
 # Configure Router
 ```
+enable
+
+#Router shoud switch its prompt from
+# Router> to Router#
+#
 configure terminal
 interface fastEthernet 0/0 // slot/nº módulo
 ip address 192.1.1.20 255.255.255.0
@@ -41,8 +46,13 @@ $ ping 192.1.1.20
 $ ping 192.1.1.50
 ```
 
+# Roudtrip delay do ping
+min/avg/max
+ping 1/1/4
+
 # Wireshark
 Timestamp: 1 seg aproximadamente
+
 
 ## FIltros
 Analyze -> Display Filters -> + 
@@ -78,7 +88,23 @@ ICMP
 	- Target MAC address: 00:00:00_00:00:00 (00:00:00:00:00:00)
 	- Target IP address: 192.1.1.30
 
+
+
+# Switch
+```bash
+# Configurar IP
+config ipif System ipaddress xxx.xxx.xxx.xxx/yyy.yyy.yyy.yyy
+
+# ping
+ping xxx.xxx.xxx.xxx times <nº de vezes>
+
+# show iproute
+show iproute
+```
 # Notes 15/Fev/2018
+login local no windows:
+**user:** .\labcom
+**pass:** labcom
 um router só precisa de duas portas porque  é uma interface entre duas redes
 
 pc -> hub (direto/cruzado)
