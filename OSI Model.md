@@ -11,8 +11,8 @@
 	- Deteção de erros
 
 
-\befgin{figure}{H}
-\includegraphics{width=0.3\textwidth}{pictures/OSI_model.png}
+\begin{figure}
+\includegraphics[width=0.3\textwidth]{pictures/OSI_model.png}
 \caption{OSI Model}
 \end{figure}
 
@@ -115,12 +115,58 @@ Bitrate do Wifi:
 # Sistema Intermédio
 ![Sistema Intermédio](pictures/middle_system.png)
 
-__AQUI__ Slide 55: The lack of success of the OSI model
 
-# TCP-IP
- TCP-IP replaced OSI MOedl
-is much simpler
-OSI is good to discuss netwroks
+# A falat de sucesso do modelo OSI
+- Os protocolos demoraram demasiado tempo para serem concluídos
+- Foi difícil obter uma cópia dos documentos que descrevem os protocolos
+- Protocolos difíceis de implementar
+	- X.400
+	- X.500
+	- FTAM
+	- CLNP
+	- X.25
+	- CMIP
+	- ES-IS
+	- IS-IS
+- Estrutura demasiado complexa para o equipamento da altura
+
+
+# TCP-IP vs OSI
+O modelo TCP-IP substituiu o modelo OSI, por ser **mais simples**, **menos complexo** e **mais abstracto**.
+
+![Comparação das camadas do Modelo TCP-IP com as camadas do modelo OSI](pictures/tcp_ip_vs_osi.png)
+
+- Vantagens:
+	- **Menos Níveis:**
+		- A `Presentation Layer` está incluída na `Application Layer`
+		- A `Session Layer`e a `Transport Layer` estão fundidas numa única, representando `End-to-End`
+	- Um único nível de Internet (i.e., de redes interconectadas), que é orientado ao `connectionless`
+		- Simples e mais eficiente
+	- O nível `sub-network` é deixado indefinido de forma propositada. Pode ser:
+		- Uma conexão `point-to-point` 
+		- Uma rede complexa com `internal switching`
+		- Na prática é considerado que é uma rede que usa a tecnologia IEEE 802.x
+	- Focado numa perspectiva `end-to-end`
+		- A estrutura interna da rede é **muito mais simples**
+	
+![Comparação entre o modelo TCP/IP e o modelo OSI](pictures/tcp_ip_vs_osi_2.png)
+
+![Stack TCP/IP](pictures/tcp_ip_stack.png)
+
+# Princípios dos Modelos da Internet
+- End-to-end
+	- Remove a complexidade das camadas inferiores da rede para as camadas superiores da rede
+	- Os nós intermédios da rede ficam mais simples
+- Simplificação
+	- Apenas 5 níveis
+- Conection-less network level
+	- Cada pacote possui informação da origem e destino
+	- Fácil de implementar sobre o meio físico
+- Protocolos flexíveis na camada de transporte
+	- TCP 
+	- UDP
+	- cumpriam tudo o que era necessário na altura
+
 
 
 

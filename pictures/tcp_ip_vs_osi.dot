@@ -1,0 +1,16 @@
+digraph TCP_IP_vs_OSI {
+	graph [pad="0.5", nodesep="0.1"];
+	rankdir=LR
+	node [shape=record];
+		struct1 [shape=record, label="{<f0> Application}|{<f1> Presentation}|{<f2> Session}|{<f3> Transport}|{<f4> Network}|{<f5> Logical}|{<f6> Physical}"]
+
+		struct2 [shape=record, label="{<f0>Application \n\n}|{<f3> Transport\nor\ 'end-to-end'}|{<f4> Network}|{<f5> Logical \n or 'Sub-net' | {{'LLC'} |{ 'MAC'}}}|{<f6> Physical}"]
+
+	struct1:f0 -> struct2:f0
+	struct1:f1 -> struct2:f0
+	struct1:f2 -> struct2:f3
+	struct1:f3 -> struct2:f3
+	struct1:f4 -> struct2:f4
+	struct1:f5 -> struct2:f5
+	struct1:f6 -> struct2:f6
+}
