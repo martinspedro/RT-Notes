@@ -12,6 +12,7 @@
 
 
 \begin{figure}
+\centering
 \includegraphics[width=0.3\textwidth]{pictures/OSI_model.png}
 \caption{OSI Model}
 \end{figure}
@@ -153,20 +154,32 @@ O modelo TCP-IP substituiu o modelo OSI, por ser **mais simples**, **menos compl
 
 ![Stack TCP/IP](pictures/tcp_ip_stack.png)
 
+Quando discutimos redes, costumamos usar o modelo OSI, excluindo a camada MAC e DLC, mesmo que a implementação dessas redes não siga o  modelo OSI.
+
 # Princípios dos Modelos da Internet
 - End-to-end
 	- Remove a complexidade das camadas inferiores da rede para as camadas superiores da rede
 	- Os nós intermédios da rede ficam mais simples
+	- A rede é connectionless
+	- Não existe a noção de estado ou memória
 - Simplificação
 	- Apenas 5 níveis
 - Conection-less network level
 	- Cada pacote possui informação da origem e destino
 	- Fácil de implementar sobre o meio físico
+	- Cada pacote transporta toda a informação necessária para circular na rede
 - Protocolos flexíveis na camada de transporte
 	- TCP 
 	- UDP
 	- cumpriam tudo o que era necessário na altura
+- _Interlayer Communication_
+	- São adicionados _headers_ em cada camada
+	- Cada _header_ é adicionado numa camada do TX e removido na mesma camada do RX
+- A `sub-network` é deixada indefinida de forma propositada
+	- Permite utilizar diferentes tipos de implementações com a mesma interface
+	- Normalmente é utilizada uma das normas IEEE que normaliza a camada física
+	- O protocolo Internet simplesmente assume que a rede é uma rede IEEE
 
-
+Na prática, a rde não funciona a 100% assim, sendo mais complexa do que o enunciado.
 
 
