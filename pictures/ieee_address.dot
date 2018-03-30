@@ -1,0 +1,3 @@
+digraph ieee_address {
+	struct_1 [shape=record, label="1º octeto \n 11011101 | 2º octeto \n 01110101 | 3º octeto \n 11001111 | 4º octeto \n 01011111 | 5º octeto \n 01000101 | 6º octeto \n 01111010"] 
+}

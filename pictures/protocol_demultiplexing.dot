@@ -1,0 +1,10 @@
+digraph protcolo_demultiplexing {
+	"Packet arrives to MAU" -> a
+
+	node [shape=box]
+	a [label="Desmultiplexing based on\n protocol type", shape=box]
+	a -> "IP Module" 
+	a -> "ARP Module" 
+
+}
+

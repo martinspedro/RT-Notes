@@ -1,0 +1,3 @@
+digraph ethernet {
+	struct_1 [shape=record, label="\n preamble | 1 bytes \n SFD | 6 bytes \n destination |  6 bytes \n source | 2 bytes \n length | 1 byte \n DSAP | 1 byte \n SSAP | 1 byte \n CTL | 43 - 1497 bytes \n data | 4 bytes \n FCFCS"]
+}
