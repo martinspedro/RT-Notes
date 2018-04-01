@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# Script to assemble all IP Networks chapter individual curated notes in a single md file
+#
+
+
+cat "IP Networks/IP Networks.md" >  "IP Networks.md"
+cat "IP Networks/OSI Model.md"   >> "IP Networks.md"
+
+# Replace Pictures directory (running at root dir)
+sed -i -e 's~../pictures~pictures~g' "IP Networks.md"
+

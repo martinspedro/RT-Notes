@@ -21,7 +21,7 @@
 - **ISO:** International Standards Organization
 
 
-Um sistema possui as segyintes camadas, organizada por funções:
+Um sistema possui as seguintes camadas, organizada por funções:
 
 - Transporte de informação através da rede:
 	- Transporte
@@ -36,7 +36,7 @@ Um sistema possui as segyintes camadas, organizada por funções:
 Vantagens:
 
 - Modular
-- Flexivel
+- Flexível
 - Bem estruturada
 
 Desvantagens
@@ -46,12 +46,12 @@ Desvantagens
 - Falta de aplicabilidade prática
 
 
-## Physycal Layer
-- Transdutor elétrico: transforma os bits em sinais físicos (elétricos, ót icos ou ondas rádio
-	- Colocar os sinais físicos no respetivo meio de transmisão
+## Physical Layer
+- Transdutor elétrico: transforma os bits em sinais físicos (elétricos, óticos ou ondas rádio
+	- Colocar os sinais físicos no respetivo meio de transmissão
 	- Recebe os sinais elétricos do meio de transmissão e 
 - Sincroniza a informação recebida
-	- Independemente do que está a ser transmitido, recebemos sempre "alguma coisa"
+	- Independentemente do que está a ser transmitido, recebemos sempre "alguma coisa"
 	- É preciso detetar se esse sinal corresponde a ruído ou informação
 - Define o tamanho máximo dos pacotes e os conectores
 - Impõe as restrições físicas ao sistema
@@ -65,14 +65,14 @@ Bitrate do Wifi:
 - Usa OFDM
 - Usa bits de controlo para identificar o início e o fim das mensagens
 - RS232 é banda base
-- SFD: Start Frame Delimitr
+- SFD: Start Frame Delimiter
 - Preamble: Saber a que velocidade estou:
 	- Envio uma sequência de relógio e usando uma PLL faço a extração do relógio e sincronizo
 
 ## Logical Layer
 - Assegura que existe uma partilha justa dos recursos pelas diferentes estações
 - Identifica as entidades envolvidas
-- Direciona a infromação entre as máquinas das rede
+- Direciona a informação entre as máquinas das rede
 - Serve de interface com a Network Layer
 
 
@@ -83,7 +83,7 @@ Bitrate do Wifi:
 - Define caminhos de interligação entre diferentes redes
 - Reencaminha pacotes entre diferentes redes
 
-## Tansport Layer
+## Transport Layer
 - Assegura a ligação entre dois pontos da rede
 - Pode ser usada para estabelecer uma conexão
 - É nesta camada que são efetuadas as ligações ponto a ponto
@@ -96,13 +96,13 @@ Bitrate do Wifi:
 - Sessions
 	- Estabelece a relação de sessões entre conexões partilhadas pela mesma funcionalidade
 - Presentation
-	- Encripação
+	- Encriptação
 	- Segurança
 	- Confidencialidade
 - Application
 	- A Aplicação/funcionalidade que requer a comunicação
 
-## COmunicação Interlayer
+## Comunicação Interlayer
 - Cada camada adiciona um header
 - Cada header é adicionada a uma camada específica no transmissor e descodificado pela mesma layer no recetor
 
@@ -116,7 +116,7 @@ Note-se ainda que:
 ### PDUs, SDus e SAPs
 - Cada camada funciona adicionando um header à mensagem
 	- Causa grande overhead
-- Cada camada transporta um pacote de dados da camada acima e usa os recursos de comunicação da camda abaixo
+- Cada camada transporta um pacote de dados da camada acima e usa os recursos de comunicação da camada abaixo
 - Cada camada comunica logicamente com a mesma layer no recetor
 
 
@@ -131,7 +131,7 @@ Note-se ainda que:
 ![Sistema Intermédio](pictures/middle_system.png)
 
 
-## A falat de sucesso do modelo OSI
+## A falta de sucesso do modelo OSI
 - Os protocolos demoraram demasiado tempo para serem concluídos
 - Foi difícil obter uma cópia dos documentos que descrevem os protocolos
 - Protocolos difíceis de implementar
@@ -179,7 +179,7 @@ Quando discutimos redes, costumamos usar o modelo OSI, excluindo a camada MAC e 
 - Simplificação
 	- Apenas 5 níveis
 	- Os problemas das camadas superiores são apenas problemas de protocolo
-- Conection-less network level
+- Connectionless network level
 	- Cada pacote possui informação da origem e destino
 	- Fácil de implementar sobre o meio físico
 	- Cada pacote transporta toda a informação necessária para circular na rede
@@ -196,6 +196,6 @@ Quando discutimos redes, costumamos usar o modelo OSI, excluindo a camada MAC e 
 	- O protocolo Internet simplesmente assume que a rede é uma rede IEEE
 	- O Modelo da Internet não se preocupa com a camada física
 
-Na prática, a rde não funciona a 100% assim, sendo mais complexa do que o enunciado.
+Na prática, a rede não funciona a 100% assim, sendo mais complexa do que o enunciado.
 
 
