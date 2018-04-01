@@ -1,0 +1,33 @@
+digraph mesh {
+	node [shape=none, label="", image="Circle-icons-computer-128.png"]
+	edge [arrowhead=none,color=grey]
+
+	//a -> b -> c -> d -> e -> f -> g -> h
+
+	a -> b 
+	a -> c
+	a -> d
+	a -> e
+	a -> f
+	a -> h
+
+	b -> c
+	b -> d
+	b -> e
+	b -> f
+	b -> h
+
+	c -> d
+	c -> e
+	c -> f
+	c -> h
+
+	d -> e
+	d -> f
+	d -> h
+
+	e -> f
+	e -> h
+
+	f -> h
+} 
