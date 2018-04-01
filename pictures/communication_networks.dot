@@ -1,0 +1,57 @@
+digraph network {
+	rankdir=RL
+	node [shape=box, label=""]
+	edge [arrowhead=none]
+
+	switch0 -> switch1
+	switch0 -> switch2
+	
+	switch1 -> no0 [label="Point-to-point\ncommunication"]
+	switch1 -> no1 
+	switch1 -> switch3 [label="Point-to-point\ncommunication"]
+	
+	switch2 -> no2
+	switch2 -> switch3
+	switch2 -> switch4
+	switch2 -> net0
+
+	switch3 -> net1
+
+	switch4 -> net1
+	switch4 -> switch5
+
+	switch5 -> no3
+	switch5 -> net0
+
+	net0    -> no4
+	net0    -> no5
+	net0    -> no6
+
+	net1    -> switch6
+	
+	switch6 -> no7
+	switch6 -> no8
+
+	switch0 [shape=circle, style=filled, fillcolor=lightblue]
+	switch1 [shape=circle, style=filled, fillcolor=lightblue]
+	switch2 [shape=circle, style=filled, fillcolor=lightblue]
+	switch3 [shape=circle, style=filled, fillcolor=lightblue]
+	switch4 [shape=circle, style=filled, fillcolor=lightblue]
+	switch5 [shape=circle, style=filled, fillcolor=lightblue]
+	switch6 [shape=circle, style=filled, fillcolor=lightblue]
+
+
+	net0 [shape=egg, style=filled, fillcolor=green]
+	net1 [shape=egg, style=filled, fillcolor=green]
+
+	node [shape=none]
+	edge [arrowhead=normal]
+	"Switching node" -> switch0
+	"Switching node" -> switch1
+	"Switching node" [shape=none, label="Switching node"]
+
+	"Terminal Equipment" -> no4
+	"Terminal Equipment" -> no3
+	"Terminal Equipment" [shape=none, label="Terminal Equipment"]
+
+}
