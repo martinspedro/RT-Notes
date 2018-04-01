@@ -2,7 +2,7 @@
  
 **OUI:** Organization Unique Identifier
 
-![Exemplo de IEEE Address Example](../pictures/ieee_address.png)
+![Exemplo de IEEE Address Example](pictures/ieee_address.png)
 
 - No 1º octeto, existem dois bits com significados especiais
 	- **Último:** bit G/I (Grupo/Individual)
@@ -41,13 +41,13 @@ Tipos de Endereços:
 ## Ethernet II
 - Existem dois tipos de _standards_ de Ethernet
 - A proposta  original foi submetida pelo IEEE
-![Estrutura de um pacote de Ethernet](../pictures/ethernet_II.png)
+![Estrutura de um pacote de Ethernet](pictures/ethernet_II.png)
 
 O 3º campo no header (`protocol`) é superior a 1500 bytes e representa o protocolo à qual os dados pertencem.
 
 
 ## IEEE 802.3
-![Estrutura de um pacote de IEEE 802.3](../pictures/ieee_802_3.png)
+![Estrutura de um pacote de IEEE 802.3](pictures/ieee_802_3.png)
 
 Os primeiros três campos referem-se ao tamanho do pacote de dados (`MAC`), indicando no campo `length` o tamanho do campo de dados.
 Os três próximos bits (`DSAP`, `SSAP` e `CTL`) referem-se à `LLC - Logical Link Control` _Protocol Layer_, e são usadas para representar o protocolo.
@@ -64,10 +64,10 @@ Contém ainda explicitamente:
 # Protocol Demultiplexing
 Usando o campo `protocol` de uma `frame` Ethernet, obtemos o diagrama de blocos representado abaixo, na figura \ref{fig:protocol_demux}
 
-![Diagrama de blocos para a operação de `protocol demultiplexing` \label{fig:protocol_demux}](../pictures/protocol_demultiplexing)
+![Diagrama de blocos para a operação de `protocol demultiplexing` \label{fig:protocol_demux}](pictures/protocol_demultiplexing)
 
 ## Classes de IP address
-![As diferentes classes de IP. A classe E não é usada atualmente](../pictures/ip_address_classes.png)
+![As diferentes classes de IP. A classe E não é usada atualmente](pictures/ip_address_classes.png)
 
 
 | Class    | # bits in prefix | # max networks | # bits in suffix | #max hosts per network |
@@ -79,7 +79,7 @@ Usando o campo `protocol` de uma `frame` Ethernet, obtemos o diagrama de blocos 
 : Características dos 3 principais tipos de endereçamento usados. Note que nem todos os potenciais endereços são usados
 
 ### Endereços IP especiais
-![(1) - Apenas permitido na inicialização. Não representa um endereço válido e destino. (2) - Não é um endereço de origem válido. (3) Nunca deve aparecer na rede (No caso demonstrado, o LOOP BACK nunca deve sair para fora da placa de rede). O (4) indica um endereço usado para dar o nome à rede.](../pictures/special_ip_address.png)
+![(1) - Apenas permitido na inicialização. Não representa um endereço válido e destino. (2) - Não é um endereço de origem válido. (3) Nunca deve aparecer na rede (No caso demonstrado, o LOOP BACK nunca deve sair para fora da placa de rede). O (4) indica um endereço usado para dar o nome à rede.](pictures/special_ip_address.png)
 
 ### Classificação dos endereços nas classes
 
@@ -130,6 +130,22 @@ máscara     & \multicolumn{1}{l|}{255.} & 0.0.0 &  & \multicolumn{1}{l|}{111111
 \end{table}
 
 ## Subnetting
-![Exemplo de Subnetting](../pictures/subnetting.png)
+![Exemplo de Subnetting](pictures/subnetting.png)
 
+
+# ARP - Address Resolution Protocol
+
+Objetivo do ARP:
+
+- Descobrir se um terminal/router com um dado endereço de IP se encontra ligado na rede
+- Permite a construção da frame de Ethernet com os endereços MAC de origem e destino corretos
+	- Quando não sabe o endereço MAC do terminal/router de destino, envia um **ARP Request**
+	- Se alguém na rede possuir na sua tabela de ARP, uma ligação entre o IP enviado no **ARP Request** e o MAC address, envia uma **ARP Response** para o terminal/router que enviou o pedido, indicando o MAC address
+
+		
+![ARP Request and Response](pictures/arp_request_response.png)
+
+- Um **ARP Request** é sempre `broadcast`
+- É identificado com o `Protocol Type 800`
+- É inserido numa frame de `Ethernet`
 

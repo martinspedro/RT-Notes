@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Script to assemble all Address chapter individual curated notes in a single md file
+#
+
+cat "Addressing/IP concepts.md" >  Address_Book.md
+cat "Addressing/ARP.md" 		  >> Address_Book.md
+
+# Replace Pictures directory (running at root dir)
+sed -i -e 's~../pictures~pictures~g' Address_Book.md
+
