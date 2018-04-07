@@ -1,0 +1,8 @@
+digraph ethernet {
+	rankdir=TB
+	node [shape=box,style=filled,fillcolor=white,color=black,fontcolor=black]
+	"Ethernet Evolution" -> "Standard Ethernet\n10 Mb/s"
+	"Ethernet Evolution" -> "Fast Ethernet\n100 Mb/s"
+	"Ethernet Evolution" -> "Gigabit Ethernet\n1 Gb/s"
+	"Ethernet Evolution" -> "Ten-Gigabit Ethernet\n10 Gb/s"
+}

@@ -1,0 +1,8 @@
+digraph ethernet {
+	rankdir=TB
+	node [shape=box,style=filled,fillcolor=white,color=black,fontcolor=black]
+	"Standard Ethernet\nCommon Implementations" -> "10Base5" [label="Bus\nThick Coaxial Cable"]
+	"Standard Ethernet\nCommon Implementations" -> "10Base2" [label="Bus\nThin Coaxial Cable"]
+	"Standard Ethernet\nCommon Implementations" -> "10BaseT" [label="Star Network\nUTP Cable"]
+	"Standard Ethernet\nCommon Implementations" -> "10BaseF" [label="Star Network\nFiber Cable"]
+}
