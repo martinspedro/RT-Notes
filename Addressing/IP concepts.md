@@ -67,13 +67,24 @@ Contém ainda explicitamente:
 # Protocol Demultiplexing
 Usando o campo `protocol` de uma `frame` Ethernet, obtemos o diagrama de blocos representado abaixo, na figura \ref{fig:protocol_demux}
 
+O `desmultiplexing` é efetuado pelo `MAU` - _Media Access Unit_:
+
+- Os pacotes são recebidos de um serviço e precisam de ser enviados para outro serviço
+- Cada serviço possui um `grid number`
+	- A camada 2 sabe a que entidade da camada 3 entregar o pacote
+	- O protocolo, ao ser desmultiplexado, "revela" o endereço da entidade da camada 3
+-
 ![Diagrama de blocos para a operação de `protocol demultiplexing`. Na figura, MAU significa _Media Access Unit_ \label{fig:protocol_demux}](../pictures/protocol_demultiplexing)
 
 ## Classes de IP address
-![As diferentes classes de IP. A classe E não é usada atualmente](../pictures/ip_address_classes.png)
+As classes IP servem para identificar os tipos de rede em relação ao seu tamanho
+
+Inicialmente, no protocolo IEEE, 3 bytes são para o fabricante, 3 bytes para as placas de rede. Atualmente, são usados os 6 bytes para as redes.
+
+![As diferentes classes de IP. A classe E não é usada atualmente](../pictures/ip_addr ess_classes.png)
 
 
-| Class    | # bits in prefix | # max networks | # bits in suffix | #max hosts per network |
+| Class    | nº bits in prefix | nº max networks | nº bits in suffix | nº max hosts per network |
 |:--------:|:---------:|:--------:|:--------:|:-----------:|
 | A        |    7      |    128   |   24     |   16777216  |
 | B        |    14     |  16384   |   16     |      65536  |
@@ -81,8 +92,14 @@ Usando o campo `protocol` de uma `frame` Ethernet, obtemos o diagrama de blocos 
 
 : Características dos 3 principais tipos de endereçamento usados. Note que nem todos os potenciais endereços são usados
 
-### Endereços IP especiais
-![(1) - Apenas permitido na inicialização. Não representa um endereço válido e destino. (2) - Não é um endereço de origem válido. (3) Nunca deve aparecer na rede (No caso demonstrado, o LOOP BACK nunca deve sair para fora da placa de rede). O (4) indica um endereço usado para dar o nome à rede.](../pictures/special_ip_address.png)
+| Class    | nº bytes network | nº bytes hosts |
+|:--------:|:----------------:|:--------------:|
+| A        |    1             |    3           |
+| B        |    2             |    2           |
+| C        |    3             |    1           |
+| D        |    4             |    0           |
+
+: Organização dos bytes no endereço da classes de IP
 
 ### Classificação dos endereços nas classes
 
@@ -94,15 +111,26 @@ Usando o campo `protocol` de uma `frame` Ethernet, obtemos o diagrama de blocos 
 | D        |    224.0.0.0             |    239.255.255.255       |
 | E        |    240.0.0.0             |    255.255.255.254       |
 
+### Problemas
+As classes começaram a ser atribuídas nos primórdios da Internet. Isto significa que, por exemplo, a Boeing possua endereços classe A, e a China não sequer um endereço classe B.
+
+### Endereços IP especiais
+- Um endereço todo a zeros identifica a rede atual
+- Endereço todo a '1' é um broadcaste local
+
+![(1) - Apenas permitido na inicialização. Não representa um endereço válido e destino . (2) - Não é um endereço de origem válido. (3) Nunca deve aparecer na rede (No caso demonstrado, o LOOP BACK nunca deve sair para fora da placa de rede). O (4) indica um endereço usado para dar o nome à rede.](../pictures/special_ip_address.png)
+
+A razão porque não posso usar endereços '0' na rede é porque existe um programador que `hard-coded` o endereço '0' como sendo o endereço que identifica a máquina/host, para facilitar a escrita de um `mac-filter`. Desde aí, como algumas máquinas possuem este código, é preferível não arriscar a correr o risco de não conseguir comunicar com todas as máquinas
+
 ## IP multicast
-Define a chamada classe D
+A classe D é uma classe usada para endereços `multicast`
 
  `1110`.<group ID>
 
 
 - Os pacotes são transmitidos a um grupo de máquinas, 
 - Cada máquina pode estar em mais do que um grupo em simultâneo
-
+- É um tipo de endereçamento específico, que se comporta de forma diferente
 
 **IGMP:** Internet Group Management Protocol
 
@@ -133,6 +161,8 @@ máscara     & \multicolumn{1}{l|}{255.} & 0.0.0 &  & \multicolumn{1}{l|}{111111
 \end{table}
 
 ## Subnetting
+O subnetting permite, entre outras coisas, organizar as redes em grupos, para _a posteriori_, ser mais fácil agrupá-las e controlá-las em conjunto
+
 ![Exemplo de Subnetting](../pictures/subnetting.png)
 
 
