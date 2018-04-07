@@ -35,12 +35,15 @@ Tipos de Endereços:
 	- Para a deteção de erros na transmissão
 - **EFD - End of frame Delimiter:** 
 	- Detetar o fim do `frame`
+	- Possui um padrão específico
+	- Utilizado porque não existe informação relativa ao tamanho do pacote na Ethernet II
 
 
 
 ## Ethernet II
 - Existem dois tipos de _standards_ de Ethernet
 - A proposta  original foi submetida pelo IEEE
+
 ![Estrutura de um pacote de Ethernet](../pictures/ethernet_II.png)
 
 O 3º campo no header (`protocol`) é superior a 1500 bytes e representa o protocolo à qual os dados pertencem.
@@ -59,7 +62,7 @@ Contém ainda explicitamente:
 - Designação do serviço de _access point_
 - Quais são as "aplicações" da camada `Applications` que precisam do pacote
 - _Control Data_
-- _Frame Check Sequence_, com CRC
+- _Frame Check Sequence_, com CRC (Cyclic Redudance Check)
 
 # Protocol Demultiplexing
 Usando o campo `protocol` de uma `frame` Ethernet, obtemos o diagrama de blocos representado abaixo, na figura \ref{fig:protocol_demux}
