@@ -6,11 +6,11 @@ titlepage-rule-color: "FFFFFF"
 titlepage-rule-height: 1
 
 title: "Addressing"
-#subtitle: "Breve História da Internet"
+subtitle: "Packet Format, Protocol Demultiplexing, IP classes and multicast, ARP"
 
 
 date: \today
-version: 0.1
+version: 0.2
 
 author: Pedro Martins
 email: martinspedro@ua.pt
