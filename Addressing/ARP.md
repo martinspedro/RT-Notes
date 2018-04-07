@@ -32,7 +32,7 @@ Esta metodologia apenas funciona para os `hubs`, porque estes apenas têm de efe
 ![ARP Request and Response](../pictures/arp_request_response.png)
 
 - Um **ARP Request** é sempre `broadcast`
-- Uma **ARP Reponse** **não é** `broadcast`
+- Uma **ARP Response** **não é** `broadcast`
 - É identificado com o `Protocol Type 800`
 - É inserido numa frame de `Ethernet`
 - O `MAC address` representa o endereço físico
@@ -40,6 +40,6 @@ Esta metodologia apenas funciona para os `hubs`, porque estes apenas têm de efe
 - Sempre que existe uma comunicação entre duas máquinas, a tabela de ARP é atualizada
 
 ## Problemas e Limitações
-- Só pode ser usado em redes locais
+- Só pode ser usado em **redes locais**
 	- Não é o mecanismo usado na Internet
 
