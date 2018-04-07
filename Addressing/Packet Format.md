@@ -1,14 +1,14 @@
 # Endereços
-Um endereço é formado por 6 octetos [^1] (ver figura \label{IEEE_address_example}
+Um endereço é formado por 6 octetos [^1], como se pode ver no diagrama da figura \ref{fig:IEEE_address_example}.
 
-![Exemplo de um endereço segundo o protocolo IEEE \label{IEEE_address_example}](../pictures/ieee_address.png)
+![Exemplo de um endereço segundo o protocolo IEEE \label{fig:IEEE_address_example}](../pictures/ieee_address.png)
 
 No 1º octeto, existem dois bits com significados especiais
 
 - **Último:** bit G/I (Grupo/Individual)
 - **Penúltimo:** bit G/L (Global/Local)
 
-O último bit do 1º octeto serve para identificar os tipos de eEndereços:
+O último bit do 1º octeto serve para identificar os tipos de endereços:
 
 - `Unicast`: G/I = 0
 - `Multicast`: G/I = 1
@@ -25,7 +25,7 @@ O último bit do 1º octeto serve para identificar os tipos de eEndereços:
 - **Preamble:** 
 	- sequência alternada de '0's e '1's, para sincronização de clock
 		- `01010101010101010101010...`
-	- Utiliza-se **código de Manchester diferencil**
+	- Utiliza-se **código de Manchester diferencial**
 		- Produz exatamente a mesma sequência que os dados binários quando estes são uma sequência alternada de '0's e '1's
 	- A **sincronização do clock** é crucial para decidir o **instante de amostragem**
 	- Otimizar a escolha do instante de amostragem $\implies$ maximizar a abertura do diagrama de olho no instante de amostragem
@@ -33,7 +33,7 @@ O último bit do 1º octeto serve para identificar os tipos de eEndereços:
 		- No entanto, é preciso a indicação da terminação da trama, uma vez que estes bits apenas servem sincronismo, e "não podem ser contados antes de existir sincronismo"
 - **SFD - Start of Frame Delimiter:** 
 	- 1 octeto
-	- Funcionalidade: permitir a deteção do início da `frame`
+	- Funcionalidade: permitir a detecção do início da `frame`
 	- Pode existir _padding_
 		- Para garantir a formatação correta do `frame` e alinhamento da informação
 		- **Pad:** bytes de _padding_ 
@@ -82,5 +82,5 @@ Contém ainda explicitamente:
 - Designação do serviço de _access point_
 - Quais são as "aplicações" da camada `Applications` que precisam do pacote
 - _Control Data_
-- _Frame Check Sequence_, com CRC (Cyclic Redudance Check)
+- _Frame Check Sequence_, com CRC (Cyclic Redundancy Check)
 
