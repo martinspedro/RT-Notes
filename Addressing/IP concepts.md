@@ -55,7 +55,7 @@ O 3º campo no header (`protocol`) é superior a 1500 bytes e representa o proto
 Os primeiros três campos referem-se ao tamanho do pacote de dados (`MAC`), indicando no campo `length` o tamanho do campo de dados.
 Os três próximos bits (`DSAP`, `SSAP` e `CTL`) referem-se à `LLC - Logical Link Control` _Protocol Layer_, e são usadas para representar o protocolo.
 
-Uma das principais diferenças entre o protocolo Ethernet II e o protocolo IEEE 802.3 é que no IEEE 802.3 é feita explicitamente a identificação do protocolo. Entre o protocolo IEEE e Ethernet II existe uma identificação explicita na trama enviada.
+Uma das principais diferenças entre o protocolo Ethernet II e o protocolo IEEE 802.3 é que no IEEE 802.3 é feita explicitamente a identificação do protocolo. Entre o protocolo IEEE e Ethernet II existe uma identificação explicita na trama enviada. Além disso, o campo length (3º campo, possui dimensão inferior a 1500 bytes)
 
 Contém ainda explicitamente:
 
@@ -67,7 +67,7 @@ Contém ainda explicitamente:
 # Protocol Demultiplexing
 Usando o campo `protocol` de uma `frame` Ethernet, obtemos o diagrama de blocos representado abaixo, na figura \ref{fig:protocol_demux}
 
-![Diagrama de blocos para a operação de `protocol demultiplexing` \label{fig:protocol_demux}](../pictures/protocol_demultiplexing)
+![Diagrama de blocos para a operação de `protocol demultiplexing`. Na figura, MAU significa _Media Access Unit_ \label{fig:protocol_demux}](../pictures/protocol_demultiplexing)
 
 ## Classes de IP address
 ![As diferentes classes de IP. A classe E não é usada atualmente](../pictures/ip_address_classes.png)
