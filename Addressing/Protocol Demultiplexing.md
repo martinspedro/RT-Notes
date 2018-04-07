@@ -1,13 +1,13 @@
 # Protocol Demultiplexing
 Usando o campo `protocol` de uma `frame` Ethernet, obtemos o diagrama de blocos representado abaixo, na figura \ref{fig:protocol_demux}
 
-O `desmultiplexing` é efetuado pelo `MAU` - _Media Access Unit_:
+O `demultiplexing` é efetuado pelo `MAU` - _Media Access Unit_:
 
 - Os pacotes são recebidos de um serviço e precisam de ser enviados para outro serviço
 - Cada serviço possui um `grid number`
 	- A camada 2 sabe a que entidade da camada 3 entregar o pacote
 	- O protocolo, ao ser desmultiplexado, "revela" o endereço da entidade da camada 3
--
+
 ![Diagrama de blocos para a operação de `protocol demultiplexing`. Na figura, MAU significa _Media Access Unit_ \label{fig:protocol_demux}](../pictures/protocol_demultiplexing.png)
 
 ## Classes de IP address
@@ -50,7 +50,7 @@ As classes começaram a ser atribuídas nos primórdios da Internet. Isto signif
 
 ### Endereços IP especiais
 - Um endereço todo a zeros identifica a rede atual
-- Endereço todo a '1' é um broadcaste local
+- Endereço todo a '1' é um broadcast local
 
 ![(1) - Apenas permitido na inicialização. Não representa um endereço válido e destino . (2) - Não é um endereço de origem válido. (3) Nunca deve aparecer na rede (No caso demonstrado, o LOOP BACK nunca deve sair para fora da placa de rede). O (4) indica um endereço usado para dar o nome à rede.](../pictures/special_ip_address.png)
 
@@ -59,7 +59,7 @@ A razão porque não posso usar endereços '0' na rede é porque existe um progr
 ## IP multicast
 A classe D é uma classe usada para endereços `multicast`
 
- `1110`.<group ID>
+ `1110.<group ID>`
 
 
 - Os pacotes são transmitidos a um grupo de máquinas, 
@@ -75,16 +75,16 @@ A classe D é uma classe usada para endereços `multicast`
 
 ## Máscaras de Rede
 - As máscaras de rede são utilizadas para fazer `classless addresing`
-- Inicialmente, os endereços IP serviam para **fixar e definir fronteiras** entre redes, usando os primeiros bits do campo de endereço, tal como no passado tinha sido feito para as classes A, B e C
-- Mais tarde, as fronteiras entre redes passaram a ser variáveis
-- Passou a ser usada uma máscara de rede para definir o que pertence ou não à rede, sendo usada para separar os endereços que pertencem à rede e os endereços que pertencem ao _host_
-- É importante para definir aspetos como `broadcaste` e `multicast`
+- Inicialmente, os endereços IP serviam para **fixar e definir fronteiras** entre redes, usando os **primeiros bits do campo de endereço**, tal como no passado tinha sido feito para as classes A, B e C
+- Mais tarde, as **fronteiras** entre redes passaram a ser **variáveis**
+- Passou a ser usada uma máscara de rede para:
+	- Definir o que pertence ou não à rede
+	- Permite separar os **endereços** que pertencem à **rede** e os endereços que pertencem ao _host_
+- É importante para definir aspetos como `broadcast` e `multicast`
 
 
 \begin{table}[]
 \centering
-\caption{My caption}
-\label{my-label}
 \begin{tabular}{llllll}
             & \multicolumn{2}{l}{decimal}       &  & \multicolumn{2}{l}{binário}  \\ \cline{2-3} \cline{5-6} 
 				& rede                      & host  &  & rede                          & hots \\
@@ -92,10 +92,12 @@ endereço IP & \multicolumn{1}{l|}{10.}  & 0.0.1 &  & \multicolumn{1}{l|}{000010
 máscara     & \multicolumn{1}{l|}{255.} & 0.0.0 &  & \multicolumn{1}{l|}{11111111} & 00000000 00000000 00000000 \\
 
 \end{tabular}
+\caption{Endereçamento \textit{classless} e relação entre o endereço IP e a máscara da rede}
+\label{tab:classless_address}
 \end{table}
 
 ## Subnetting
-O subnetting permite, entre outras coisas, organizar as redes em grupos, para _a posteriori_, ser mais fácil agrupá-las e controlá-las em conjunto
+O subnetting permite, entre outras coisas, organizar as redes em grupos, para _a posteriori_ ser mais fácil agrupá-las e controlá-las em conjunto
 
 ![Exemplo de Subnetting](../pictures/subnetting.png)
 
