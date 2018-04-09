@@ -103,8 +103,8 @@ show iproute
 ```
 # Notes 15/Fev/2018
 login local no windows:
-**user:** .\labcom
-**pass:** labcom
+**user:** `.\labcom`
+**pass:** `labcom`
 um router só precisa de duas portas porque  é uma interface entre duas redes
 
 pc -> hub (direto/cruzado)
