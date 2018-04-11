@@ -6,11 +6,11 @@ titlepage-rule-color: "FFFFFF"
 titlepage-rule-height: 1
 
 title: "IP Networks"
-subtitle: "Breve História da Internet"
+subtitle: "Breve História da Internet, O que é a Internet, Comunicação, Estilos de Classificação, _Forwarding_ de Informação, Camada Lógica, Estrutura da Rede, Relações da Camada de Transporte, Relações Hierárquicas e Modelo OSI"
 
 
 date: \today
-version: 0.1
+version: 0.2
 
 author: Pedro Martins
 email: martinspedro@ua.pt
