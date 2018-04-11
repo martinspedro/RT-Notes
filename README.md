@@ -17,9 +17,7 @@ A collection of useful notes and pdfs for the [Redes e Telecomunicações course
 4. Some of the used diagrams are generated using either [dot](https://en.wikipedia.org/wiki/DOT_(graph_description_language)) or [tikz](https://ctan.org/pkg/tikz-page). The remaining were copied from the course slides.
 5. The images are taken from the course slides and other materials provided by the professors
 
-
-A GIT repository with the note taking tool is available in this [repository ](https://github.com/k3rn3l-pan1c/logbook)
-
+To simplify and automate the process of managing, tracking changes and publishing notes, I developed a tool to ease this process, a similar to a digital logbook. This tool is available at this [repository](https://github.com/k3rn3l-pan1c/logbook).
 
 ### DOT & Graphviz
 The [dot graph description language](https://en.wikipedia.org/wiki/DOT_(graph_description_language)) is a graphic description language, enable the fast creation of reasonably neat diagrams
@@ -36,14 +34,15 @@ For more information, check out [this amazing guide](https://www.google.pt/url?s
 
 ## Publishing
 To ease the publish of an eye-candy pdf:
+
 ```bash
- # Assuming that exists a metadata file named notes.yaml in the metadata folder
-./renderpdf <notes.md>
-
-# Assuming a metadata file is going to be provided
-./renderpdf <notes.md> <metadata_file.yaml>
-
+./logbook -p <notes.md>
 ```
+
+To use more advanced directives while publishing to pdf, the script looks for a yaml metadata file in the `metadata` folder. If no metadata file is provided, the script uses the default directives.
+
+The script used for publishing is available at this [repository](https://github.com/k3rn3l-pan1c/logbook).
+
 ## Disclaimer
 Currently this work is **highly experimental and not yet scientific reviewed**.
 **Do not trust this notes by themselves**. They are meant to complete other materials, **not replace them**.
