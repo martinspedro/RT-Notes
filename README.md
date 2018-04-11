@@ -1,4 +1,4 @@
-# E4-notes
+# RT-notes
 A collection of useful notes and pdfs for the [Redes e Telecomunicações course](http://www.ua.pt/deti/uc/2825) at [Aveiro University](https://www.ua.pt/).
 
 ## Published Notes
