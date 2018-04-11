@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Script to assemble all Media Access subchapters into a single chapter md file
+#
+
+chapter_name="Media_Access.md"
+folder_name="Media Access"
+
+cat "$folder_name/Communication Networks.md" >  $chapter_name
+cat "$folder_name/Shared Media.md"           >> $chapter_name
+cat "$folder_name/Token Ring.md"             >> $chapter_name
+cat "$folder_name/Ethernet Evolution.md"     >> $chapter_name
+cat "$folder_name/Hubs.md"                   >> $chapter_name
+cat "$folder_name/Gigabit Ethernet.md"       >> $chapter_name
+cat "$folder_name/LLC.md"                    >> $chapter_name
+
+# Replace Pictures directory (running at root dir)
+sed -i -e 's~../pictures~pictures~g' $chapter_name
+

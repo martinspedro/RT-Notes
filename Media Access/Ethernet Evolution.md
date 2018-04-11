@@ -68,7 +68,7 @@ Para a configuração máxima, apresentada na figura \label{ethernet_10Base5_net
 ### Hub operation
 - Um hub é um repetidor que opera na camada física, efetuando o `broadcast` da informação de todas as portas para todas as portas
 
-![Exemplo da operação de `broadcast` de um `hub`](../pictures/ethernet_10BaseT_network)
+![Exemplo da operação de `broadcast` de um `hub`](../pictures/ethernet_10BaseT_network.png)
 
 
 

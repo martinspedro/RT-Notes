@@ -34,10 +34,11 @@ As topologias da rede podem ser **lógicas** ou **físicas**, podendo coexistir 
 
 
 Diferentes tipologias representam diferentes formas de **distribuir** e **partilhar  recursos**. Existem 4:
-- `bus`
-- `estrela`_(star)_
-- `mesh`
-- `anel`_(ring)_
+
+1. `mesh`
+2. `bus`
+3. `anel`_(ring)_
+4. `estrela`_(star)_
 
 ### Mesh
 Todos os nós estão ligados a todos os otros. Só é usada em redes de pequena dimensão, em que o número de nodos é reduzido.
@@ -58,7 +59,7 @@ Em ligações físicas por cabo/fibra, é usada redes com 4 a 6 nós, principalm
 
 ![Diagrama de uma rede em _mesh_](../pictures/mesh_network.png)
 
-# Bus
+### Bus
 - A ligação física é um **único cabo**, **partilhado entre todos**
 	- significa que se o cabo se estragar, a rede é destruída
 - Qualquer terminal do cabo que não esteja ligado a nenhuma interface precisa de ser terminado propriamente.
@@ -105,7 +106,7 @@ Em ligações físicas por cabo/fibra, é usada redes com 4 a 6 nós, principalm
 
 ![Diagrama de uma rede do tipo Ring](../pictures/ring_network.png)
 
-# Star network
+### Star network
 - Todas as conexões são de 1 para 1, ou seja, ponto a ponto
 - Qualquer problema que ocorra na rede é sempre local
 	- Exlcuindo os problemas que afetem o hub
@@ -136,7 +137,7 @@ Em ligações físicas por cabo/fibra, é usada redes com 4 a 6 nós, principalm
 
 ![Diagrama de uma rede do tipo Star](../pictures/star_network.png)
 
-# Tree networks
+### Tree networks
 - Estrutura em árvore
 	- folhas representam os nós da rede
 	- tronco representam a linha de comunicação principal de alto débito: `backbone cable`. Pode ser implementado com:
