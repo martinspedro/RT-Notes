@@ -1,4 +1,5 @@
-# Endereços
+# Packet Format
+## Endereços
 Um endereço é formado por 6 octetos [^1], como se pode ver no diagrama da figura \ref{fig:IEEE_address_example}.
 
 ![Exemplo de um endereço segundo o protocolo IEEE \label{fig:IEEE_address_example}](../pictures/ieee_address.png)
@@ -19,7 +20,6 @@ O último bit do 1º octeto serve para identificar os tipos de endereços:
 
 [^1]: octeto: conjunto de 8 bits. 1 byte.
 
-# Packet Format
 
 ## Comum aos protocolos
 - **Preamble:** 

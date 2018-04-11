@@ -3,10 +3,10 @@
 # Script to assemble all Address chapter individual curated notes in a single md file
 #
 
-cat "Addressing/Packet Format.md"           >  Address_Book.md
-cat "Addressing/Protocol Demultiplexing.md" >> Address_Book.md
-cat "Addressing/ARP.md" 		              >> Address_Book.md
+cat "Addressing/Packet Format.md"           >  Addressing.md
+cat "Addressing/Protocol Demultiplexing.md" >> Addressing.md
+cat "Addressing/ARP.md" 		              >> Addressing.md
 
 # Replace Pictures directory (running at root dir)
-sed -i -e 's~../pictures~pictures~g' Address_Book.md
+sed -i -e 's~../pictures~pictures~g' Addressing.md
 
