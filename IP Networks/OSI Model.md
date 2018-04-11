@@ -146,7 +146,7 @@ Note-se ainda que:
 - Estrutura demasiado complexa para o equipamento da altura
 
 
-# TCP-IP vs OSI
+### TCP-IP vs OSI
 O modelo TCP-IP substituiu o modelo OSI, por ser **mais simples**, **menos complexo** e **mais abstracto**.
 
 ![Comparação das camadas do Modelo TCP-IP com as camadas do modelo OSI](pictures/tcp_ip_vs_osi.png)
@@ -170,7 +170,7 @@ O modelo TCP-IP substituiu o modelo OSI, por ser **mais simples**, **menos compl
 
 Quando discutimos redes, costumamos usar o modelo OSI, excluindo a camada MAC e DLC, mesmo que a implementação dessas redes não siga o  modelo OSI.
  
-# Princípios dos Modelos da Internet
+## Princípios dos Modelos da Internet
 -  End-to-end
 	- Remove a complexidade das camadas inferiores da rede para as camadas superiores da rede
 	- Os nós intermédios da rede ficam mais simples
