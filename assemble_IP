@@ -4,9 +4,17 @@
 #
 
 
-cat "IP Networks/IP Networks.md" >  "IP Networks.md"
-cat "IP Networks/OSI Model.md"   >> "IP Networks.md"
+cat "IP Networks/Internet History.md"           >  "IP_Networks.md"
+cat "IP Networks/Internet: What is it?.md"      >> "IP_Networks.md"
+cat "IP Networks/communication.md"              >> "IP_Networks.md"
+cat "IP Networks/Classification Styles.md"      >> "IP_Networks.md"
+cat "IP Networks/Information Forwarding.md"     >> "IP_Networks.md"
+cat "IP Networks/Logical Deployment.md"         >> "IP_Networks.md"
+cat "IP Networks/Networks Structure.md"         >> "IP_Networks.md"
+cat "IP Networks/Transport Relationship.md"     >> "IP_Networks.md"
+cat "IP Networks/Hierarchical Relationships.md" >> "IP_Networks.md"
+cat "IP Networks/OSI Model.md"                  >> "IP_Networks.md"
 
 # Replace Pictures directory (running at root dir)
-sed -i -e 's~../pictures~pictures~g' "IP Networks.md"
+sed -i -e 's~../pictures~pictures~g' "IP_Networks.md"
 

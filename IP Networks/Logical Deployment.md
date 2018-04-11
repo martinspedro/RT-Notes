@@ -3,18 +3,17 @@
 	- A implementação física da rede não tem de possuir nenhuma relação com a implementação lógica da mesma
 	- A implementação física são apenas cabos
 
-\begin{figure}[H]
+\begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{../pictures/client-server-network.png)
+\includegraphics[width=0.5\textwidth]{../pictures/client-server-network.png}
 \caption{Modelo lógico de uma rede Cliente Servidor}
 \end{figure}	
 
-\begin{figure}[H]
+\begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{../pictures/peer-to-peer-network.png)
+\includegraphics[width=\linewidth]{../pictures/peer-to-peer-network.png}
 \caption{Modelo lógico de uma rede Peer-to-peer}
 \end{figure}	
-
 
 A relação lógica pode ser:
 
@@ -62,7 +61,4 @@ A maior parte das comunicações hoje em dia são assimétricas
 - Conexões simétricas: `peer-to-peer model`
 	- Exemplos: chamadas 
 - Os valores de simetria de entre a `client-server` e `peer-to-peer` situam-se entre 1:5 e 1:10
-
-
-
 

@@ -13,7 +13,7 @@
 
 \begin{figure}
 \centering
-\includegraphics[width=0.3\textwidth]{pictures/OSI_model.png}
+\includegraphics[width=0.3\textwidth]{../pictures/OSI_model.png}
 \caption{OSI Model}
 \end{figure}
 
