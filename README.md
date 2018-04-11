@@ -2,10 +2,10 @@
 A collection of useful notes and pdfs for the [Redes e Telecomunicações course](http://www.ua.pt/deti/uc/2825) at [Aveiro University](https://www.ua.pt/).
 
 ## Published Notes
-- _[version 0.2]_ [Ip Networks](pdf/IP\ Networks.pdf)
-	- _[version 0.2]_ [OSI Model](pdf/OSI\ Model.pdf)
-- _[version 0.2]_ [Addressing](pdf/Address_Book.pdf)
-- _[version 0.1]_ [Media Access](pdf/Media_Access.pdf)
+- _[version 0.1]_ [Introductory Notes](https://github.com/k3rn3l-pan1c/RT-Notes/raw/master/pdf/Introduction.pdf)
+- _[version 0.2]_ [Ip Networks](https://github.com/k3rn3l-pan1c/RT-Notes/raw/master/pdf/IP_Networks.pdf)
+- _[version 0.2]_ [Addressing](https://github.com/k3rn3l-pan1c/RT-Notes/raw/master/pdf/Addressing.pdf)
+- _[version 0.1]_ [Media Access](https://github.com/k3rn3l-pan1c/RT-Notes/raw/master/pdf/Media_Access.pdf)
 
 ## Note taking process
 1. Notes are taken using pandoc markdown extended syntax
