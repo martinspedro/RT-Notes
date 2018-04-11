@@ -24,8 +24,6 @@ Se tivermos N nós, iremos precisar de $\frac{N^2 - N}{2}$ conexões, o que para
 - Cada conexão necessita de um cabo e de $N -1 $ interfaces.
 - **Não é escalável**
 
-__AQUI__
-
 ## Network topologies
 As topologias da rede podem ser **lógicas** ou **físicas**, podendo coexistir em diferentes níveis, ou estarem misturadas no mesmo nível.
 
