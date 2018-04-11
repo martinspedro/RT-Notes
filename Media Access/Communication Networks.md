@@ -7,7 +7,7 @@ São formadas principalmente por:
 - Ligações partilhadas
 
 
-![Rede de Telecomunicações. Os switchs estão representados a azul e as conexões partilhadas a verde. Os nós terminais são identificados a branco](../pictures/communication_networks.png)
+![Rede de Telecomunicações. Os switches estão representados a azul e as conexões partilhadas a verde. Os nós terminais são identificados a branco](../pictures/communication_networks.png)
 
 ## Ligações ponto a ponto
 As ligações ponto a ponto representam uma **ligação física** entre dois dispositivos.
@@ -20,7 +20,7 @@ Se tivermos N nós, iremos precisar de $\frac{N^2 - N}{2}$ conexões, o que para
 
 ![Evolução do número de ligações ponto a ponto necessárias em função do número de dispositivos](../pictures/point_to_point_links.png)
 
-- Cada estação que é adicionada implica establecer mais $N - 1$ ligações novas, ou seja, todas as existentes.
+- Cada estação que é adicionada implica estabelecer mais $N - 1$ ligações novas, ou seja, todas as existentes.
 - Cada conexão necessita de um cabo e de $N -1 $ interfaces.
 - **Não é escalável**
 
@@ -39,7 +39,7 @@ Diferentes tipologias representam diferentes formas de **distribuir** e **partil
 4. `estrela`_(star)_
 
 ### Mesh
-Todos os nós estão ligados a todos os otros. Só é usada em redes de pequena dimensão, em que o número de nodos é reduzido.
+Todos os nós estão ligados a todos os outros. Só é usada em redes de pequena dimensão, em que o número de nodos é reduzido.
 
 Pela natureza do meio de comunicação, a rede wireless é `mesh`
 
@@ -78,7 +78,7 @@ Em ligações físicas por cabo/fibra, é usada redes com 4 a 6 nós, principalm
 		- Terminamos a rede da primeira interface
 		- vemos se funciona
 	- Vamos de computador em computador, terminal em terminal até descobrir o problema
-		- não posso usar dividão binária
+		- não posso usar divisão binária
 
 ![Diagrama de uma rede do tipo _bus_](../pictures/bus_network.png)
 
@@ -107,7 +107,7 @@ Em ligações físicas por cabo/fibra, é usada redes com 4 a 6 nós, principalm
 ### Star network
 - Todas as conexões são de 1 para 1, ou seja, ponto a ponto
 - Qualquer problema que ocorra na rede é sempre local
-	- Exlcuindo os problemas que afetem o hub
+	- Excluindo os problemas que afetem o hub
 	- Se o hub morre, a rede morre
 	- Se um cabo tiver problemas, só o cliente desse cabo é que sofre
 - Implica usar um cabo por máquina, $N$
@@ -124,7 +124,7 @@ Em ligações físicas por cabo/fibra, é usada redes com 4 a 6 nós, principalm
 - Não existem falhas na rede sempre que um dos terminais é desconectado
 - Fácil identificar falhas
 	- Fácil remover elementos com falhas da rede
-- Melhor perfomance que um bus
+- Melhor performance que um bus
 
 **Desvantagens:**
 

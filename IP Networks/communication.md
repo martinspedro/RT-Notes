@@ -20,7 +20,7 @@ A Internet, para funcionar como uma entidade, requer:
 As conexões físicas são asseguradas através de cabos e `routers`. **Routers:** são dispositivos que transportam pacotes entre conexões físicas de redes diferentes. Uma rede é um sistema usado para conectar dispositivos que usa apenas uma tecnologia única de transmissão.
 
 ```bash
-# Para visualizar a IP routing table de um pc Linux
+# Para visualizar a IP routing table de um PC Linux
 $ route
 ```
 

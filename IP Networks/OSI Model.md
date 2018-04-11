@@ -8,7 +8,7 @@
 	- Identificação correta do emissor e do recetor
 	- `Routing` adequado da informação
 	- Garantias que a informação é entregue ao destinatário
-	- Deteção de erros
+	- Detecção de erros
 
 
 \begin{figure}
@@ -58,9 +58,9 @@ Desvantagens
 - Em larga escala, é o fator mais importante do custo
 
 
-Bitrate do Wifi:
+Bitrate do WiFi:
 
-- Depende da norma (wifi standards)
+- Depende da norma (WiFi standards)
 - da potência do sinal
 - Usa OFDM
 - Usa bits de controlo para identificar o início e o fim das mensagens
@@ -113,7 +113,7 @@ Note-se ainda que:
 	- lógica
 	- DLC
 
-### PDUs, SDus e SAPs
+### PDUs, SDUs e SAPs
 - Cada camada funciona adicionando um header à mensagem
 	- Causa grande overhead
 - Cada camada transporta um pacote de dados da camada acima e usa os recursos de comunicação da camada abaixo

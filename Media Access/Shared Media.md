@@ -1,30 +1,30 @@
 # Shared Media
-- Múlitplos emissores e recetores partilham o mesmo canal de transmissão
+- Múltiplos emissores e receptores partilham o mesmo canal de transmissão
 - Existe **competição** pelo acesso ao meio
 	- Não podem ser transmitidos no mesmo cabo dois pacotes ao mesmo tempo
-	- É necessário existir coordenação entre os vários nós (tanto emissores como recetores)
+	- É necessário existir coordenação entre os vários nós (tanto emissores como receptores)
 - Requer mecanismos de **acesso múltiplo**
 
 
 - classrooms:
 	- a student raised the arm
 	- the teacher decides
-	- central control mechanis,
+	- central control mechanisms
 
 
 ## ALOHA [^1]
 - Sistema de transmissão de pacotes de rádio
-- Cada estação trasmite e recebe em diferentes frequências
+- Cada estação transmite e recebe em diferentes frequências
 - As estações transmitem **assim que possuam um pacote para enviar**, **independentemente do estado do canal**
 	- Ocorrem colisões quando duas ou mais estações transmitem ao mesmo tempo
 
 
-**Mecanismo de deteção e correção de colisões**
+**Mecanismo de detecção e correção de colisões**
 
 1. O emissor coloca a mensagem no meio partilhado
-2. Se o recetor receber a mensagem corretamente, envia um `ACK`, indicando ao emissor que a mensagem foi corretamente recebida
-3. Se após o intervalo de tempo o emissor	não receber o `ACK` do recetor (`timeout`), o emissor repete a transmissão do pacote
-	- O `timeout` deve ser maior que o dobro do tempo de propagação (`round-trip delay`), para garantir que o pacote tem tempo para chegar ao recetor e o emissor tem tempo de receber o `ACK`
+2. Se o receptor receber a mensagem corretamente, envia um `ACK`, indicando ao emissor que a mensagem foi corretamente recebida
+3. Se após o intervalo de tempo o emissor	não receber o `ACK` do receptor (`timeout`), o emissor repete a transmissão do pacote
+	- O `timeout` deve ser maior que o dobro do tempo de propagação (`round-trip delay`), para garantir que o pacote tem tempo para chegar ao receptor e o emissor tem tempo de receber o `ACK`
 4. A retransmissão é efetuada após o emissor esperar um tempo aleatório, depois de ocorrer o `timeout`, 
 	- Ao usar um tempo aleatório, a probabilidade de ocorrerem colisões repetidas é diminuída
 
@@ -34,12 +34,12 @@
 O tempo de `timeout` tem de ser cuidadosamente escolhido:
 
 - Demasiado lento: podem ocorrer situações em que o meio esteja sem uso, criando _delays_
-- Demasiado rápido: o recetor pode não ter tempo para receber e enviar um `ACK`
+- Demasiado rápido: o receptor pode não ter tempo para receber e enviar um `ACK`
 
 
-A política de resolução das colisões é a **retransmissão**. Numa rede com taxas de ocupação elevadas, a perfromancedeteriora-se, limitando a comunicação a um máximo de $\approx 20 \%$, devido aos mecanismos de colisão e retransmissão
+A política de resolução das colisões é a **retransmissão**. Numa rede com taxas de ocupação elevadas, a performance deteriora-se, limitando a comunicação a um máximo de $\approx 20 \%$, devido aos mecanismos de colisão e retransmissão
 
-[^1]: Desenvolvido na Universidade do Hawai, para comunicar entre as ilhas
+[^1]: Desenvolvido na Universidade do Hawaii, para comunicar entre as ilhas
 
 ### Performance
 Se considerarmos `g` a taxa máxima de transmissão de pacotes que o canal consegue suportar, então temos de garantir que $g > \lambda$, onde $\lambda$ é o número total de pacotes a transmitir. Esta condição garante que é possível retransmitir pacotes, devido às colisões ocorridas.
@@ -62,13 +62,13 @@ Uma estação só começa a transmitir se detetar que o meio está livre. O obje
 
 As colisões não são impedidas porque as estações estão separadas uma das outras, e portanto no mesmo instante duas estações podem começar a transmitir, se ambas virem o canal como desocupado. 
 
-O tempo de propagação entre as estações faz com que estas não saibam se já existe outra ou não a transmitir/iniciar a transmissão. Assim, quando uma estação deteta qe o meio está livre apenas deteta que não existe nenhum mensagem a chegar/passar por si.
+O tempo de propagação entre as estações faz com que estas não saibam se já existe outra ou não a transmitir/iniciar a transmissão. Assim, quando uma estação deteta que o meio está livre apenas deteta que não existe nenhum mensagem a chegar/passar por si.
 
 
 ![Diagrama de uma rede CSMA. A distância entre as várias estações impõe um tempo de propagação entre elas, que pode resultar em colisões. Na figura, quando a estação 1 começa a transmitir, são necessários $\tau_1$ segundos até que essa transmissão seja detetada pela segunda estação, que também começou a transmitir nesse intervalo de tempo.](../pictures/csma_diagram.png)
 
 ### Collision Detection
-A deteção de colisões permitir que mal seja detetada uma colisão, o emissor que a detetou para imediatamente a transmissão, para se puder retomar a transmissão de um pacote de cada vez
+A detecção de colisões permitir que mal seja detetada uma colisão, o emissor que a detetou para imediatamente a transmissão, para se puder retomar a transmissão de um pacote de cada vez
 
 ![Diagrama da linha numa transmissão - pt1](../pictures/csma_channel_pt1.png)
 
@@ -82,7 +82,7 @@ A deteção de colisões permitir que mal seja detetada uma colisão, o emissor 
 
 - Devido a `round-trip delay`, para ser possível detetar uma colisão é necessário que a estação ainda esteja a transmitir após $$t_{min_{TX}} = 2 \times round\ trip\ delay$$
 - É preciso que o emissor ainda esteja a emitir $2 \times round\ trip\ delay$. Assim, a informação mínima que têm de ser enviada para puder ser detetada uma colisão tem de representar $2 \tau$.
-- O tempo máximo de propagação é entre os dois extermos da rede
+- O tempo máximo de propagação é entre os dois extremos da rede
 
  
 ### Performance
@@ -124,7 +124,7 @@ onde $a = \frac{t}{T}$ e T representa o tempo de transmissão de um pacote. Sabe
 	5. Espero o delay e de seguida envio
 		- Se tiver uma colisão, duplico a minha _pool_ de números de `time-slots`
 		- Se tiver uma transmissão bem sucedida, reduzo para metade a _pool_ de números de `time-slots`
-	6. Volot a repetir o número 1, com as novas especificações para o tamanho da pool
+	6. Volto a repetir o número 1, com as novas especificações para o tamanho da pool
 - O número de `slots` de espera para a N-enésima tentativa é dado por uma variável aleatória distribuída uniformemente na gama de valores:
 	$$ 0 \leq r < 2^k, k = min(N, 10)$$
 	- onde `N` é o número de tentativas e `k` é o número de tempos de espera para transmitir

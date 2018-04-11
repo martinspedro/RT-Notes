@@ -22,7 +22,7 @@ Quando uma estação possui um pacote pronto a transmitir, **espera** pela **rec
 
 Uma rede `token ring` possui um tempo de espera determinístico. No máximo, o tempo de espera será 
 $$N \times (tempo\ máximo\ da\ mensagem + tempo\ de\ passagem\ do\ token)$$
-onde N são o número de estações exisitentes
+onde N são o número de estações existentes
 
 Existe uma estação responsável por **monitorizar** a rede `active monitor`. As suas principais funcionalidades são:
 
@@ -33,18 +33,18 @@ Existe uma estação responsável por **monitorizar** a rede `active monitor`. A
 - Detetar ausência de `token` na rede
 	- A **estação monitora** mantêm um `timer`
 	- Sempre que o `token` passa pela estação, o `timer` sobre um reset
-	- Se o `timer` esgotar o seu intervalo de contagam, um novo `token` é introduzido no anel
+	- Se o `timer` esgotar o seu intervalo de contagem, um novo `token` é introduzido no anel
 - Detetar se existe algum monitor no `ring`:
 	- envia periodicamente uma `frame`: `active-monitor-present`
 	- Cada estação mantém um `timer` 
 		- atualizado/reset cada vez que um `frame` é recebido
 	- O monitor pode ser qualquer uma das estações
-	- Quando o `timer` expira, occorre processo para eleger um novo monitor
+	- Quando o `timer` expira, ocorre processo para eleger um novo monitor
 		- É escolhida a estação com maior endereço
 
 No `Token Ring`, tudo é baseado em `timers`
 
-- Se este tipo de sinalização não aparecer, alguma estação toma  ainiciativa
+- Se este tipo de sinalização não aparecer, alguma estação toma a iniciativa
 - É escolhido com base no endereço da máquina
 
 
@@ -75,5 +75,5 @@ Protocolo Ethernet IEEE 802.3
 ### Vantagens do _Token-Ring_
 1. Se a rede estiver com bastante ocupada, o `token` introduz na rede uma política de acesso `round-robin`
 	- Garante eficiência e justiça no acesso ao meio
-	- Na Ethernet, com demasiada carga na rede, a utilização e acesso ao meio pelas estações é ineficiente devido ao elevado número de colisões netre pacotes
+	- Na Ethernet, com demasiada carga na rede, a utilização e acesso ao meio pelas estações é ineficiente devido ao elevado número de colisões entre pacotes
 

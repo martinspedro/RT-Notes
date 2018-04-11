@@ -1,6 +1,6 @@
 # Breve História da Internet
 - Começou por ser uma experiência no meio académico no final da década de 60
-- Inicialmente ARPANET, depois NSFnet e agora, "ANYBODYSNET"
+- Inicialmente ARPANET, depois NSFnet e agora, _"ANYBODYSNET"_
 	- Não é proprietária
 - Não é detida por uma única entidade
 	- Existem vários serviços a providenciar:
@@ -68,7 +68,7 @@ Funciona com base em `RFC` - Request For Comments. Sempre que se quer acrescenta
 	- **IANA** _(Internet Assigned Number Authority)_
 		- Responsável pela gestão dos:
 			- DNS
-			- domínios TLD (top level domains)
+			- domínios TLD (Top Level Domains)
 
 
 As conexões entre a Internet Tree não é hierárquica
@@ -87,7 +87,7 @@ As conexões entre a Internet Tree não é hierárquica
 A Internet é uma rede **aproximadamente hierárquica**. Pode ser vista como uma **"rede de redes"**, que permite a ligação entre várias redes, que podem conter características muito diferentes. 
 
 
-É consituída por um conjunto de dispositivos ligados entre si, que hierarquicamente podem ser:
+É constituída por um conjunto de dispositivos ligados entre si, que hierarquicamente podem ser:
 
 - `hosts`
 - `terminal systems`
@@ -156,7 +156,7 @@ A Internet, para funcionar como uma entidade, requer:
 As conexões físicas são asseguradas através de cabos e `routers`. **Routers:** são dispositivos que transportam pacotes entre conexões físicas de redes diferentes. Uma rede é um sistema usado para conectar dispositivos que usa apenas uma tecnologia única de transmissão.
 
 ```bash
-# Para visualizar a IP routing table de um pc Linux
+# Para visualizar a IP routing table de um PC Linux
 $ route
 ```
 
@@ -266,7 +266,7 @@ Numa rede de comunicações precisamos de saber:
 
 - Quantas pessoas/dispositivos estão conectados num mesmo instante de tempo
 - Se os dispositivos estão a falar diretamente entre eles ou com uma entidade hierarquicamente acima deles na rede
-- Como é que a informação é enviada, i.e, o quer torna:
+- Como é que a informação é enviada, i.e., o quer torna:
 	 - um email num email
 	 - uma mensagem numa mensagem
 	 - um ficheiro num ficheiro
@@ -441,7 +441,7 @@ A maior parte das comunicações hoje em dia são assimétricas
 - As conexões têm se vindo a tornar mais simétricas desde que a quantidade de conexões `peer to peer` aumentou
 - Tipicamente, existe mais informação a circular de um lado para o outro do que ao contrário
 	- O tráfego de download é superior ao de upload
-	- Daí que as velocidades de downlink e uplink sejam diferentes
+	- Daí que as velocidades de _downlink_ e _uplink_ sejam diferentes
 - Conexões assimétricas: `client-server model`
 - Conexões simétricas: `peer-to-peer model`
 	- Exemplos: chamadas 
@@ -455,7 +455,8 @@ A maior parte das comunicações hoje em dia são assimétricas
 	- malhas de routers interligados
 		- normalmente, por fibra ótica
 	- cria uma _network_ de _networks_
-	- MPLS (Multi protocol label switching - circuitos virtuais sobre a uma camada física de links óticos)
+	- MPLS (Multi Protocol Label Switching)
+		- circuitos virtuais sobre a uma camada física de links óticos)
 - **Access Networks**
 	- Interliga diferentes áreas
 	- É o que o _network provider_ nos vende
@@ -516,7 +517,7 @@ A Internet funciona com base nos ganhos de multiplexagem. Leva à aplicação de
 > Mot the bitrate you have, but how long it takes you to have it
 
 - Representa o tempo que um pacote demora a atravessar a rede através dos vários nós até atingir o nó de destino
-- O tempo de acesso ao uplink depende da camada física
+- O tempo de acesso ao _uplink_ depende da camada física
 	- fibra melhor que ADSL
 
 ### Residential Networks
@@ -544,7 +545,7 @@ A Internet funciona com base nos ganhos de multiplexagem. Leva à aplicação de
 	- FDM: 50 kHz - 1 MHz para `downstream`
 		- 4 kHz - 50 kHz para `upstream`
 - Cable TV
-- HFC: Hybrid Fiber Coaxi
+- HFC: Hybrid Fiber Coaxial
 	- TV cabo
 	- também é possível transmitir dados pela rede
 - Wireless access networks
@@ -609,7 +610,7 @@ A informação que foi enviada **não possui relação nenhuma entre si**:
 		- torrents
 		- ligação entre duas entidades, no geral
 	- modelo cliente-servidor
-		- _request http_: aceder a um website
+		- _request HTTP_: aceder a um website
 
 
 
@@ -690,11 +691,11 @@ Portos mais conhecidos e tabelados internacionalmente.
 ### Comparação com o modelo cliente servidor: 
 - Se a rede for muito grande, é mau porque uma rede peer-to-peer não tem nenhum servidor estável
 - A probabilidade de existir um problema na rede aumenta
-- Num serviço http, a ligação entre o cliente e o servidor é muito mais estável;
+- Num serviço HTTP, a ligação entre o cliente e o servidor é muito mais estável;
 - Exemplos: 
 	- torrent
 		- download efetuada entre múltiplos utilizadores
-	- http:
+	- HTTP:
 		- apenas uma `source` (servidor)
 
 
@@ -708,7 +709,7 @@ Portos mais conhecidos e tabelados internacionalmente.
 	- Identificação correta do emissor e do recetor
 	- `Routing` adequado da informação
 	- Garantias que a informação é entregue ao destinatário
-	- Deteção de erros
+	- Detecção de erros
 
 
 \begin{figure}
@@ -758,9 +759,9 @@ Desvantagens
 - Em larga escala, é o fator mais importante do custo
 
 
-Bitrate do Wifi:
+Bitrate do WiFi:
 
-- Depende da norma (wifi standards)
+- Depende da norma (WiFi standards)
 - da potência do sinal
 - Usa OFDM
 - Usa bits de controlo para identificar o início e o fim das mensagens
@@ -813,7 +814,7 @@ Note-se ainda que:
 	- lógica
 	- DLC
 
-### PDUs, SDus e SAPs
+### PDUs, SDUs e SAPs
 - Cada camada funciona adicionando um header à mensagem
 	- Causa grande overhead
 - Cada camada transporta um pacote de dados da camada acima e usa os recursos de comunicação da camada abaixo

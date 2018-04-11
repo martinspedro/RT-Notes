@@ -17,7 +17,7 @@ Gigabit Ethernet (10 Gb/s) $\rightarrow$ reduzir o tamanho da rede e aumentar o 
 - Os octetos nos campos protocolo deixaram de ser apenas octetos (mais bits)
 - Os pacotes mais pequenos sofrem extensão da `carrier`
 - Quando vários pacotes pequenos precisam de ser transmitidos, podem ser transmitidos `back-to-back`
-	- O primeiro pacote tem de ser extendido para ocupar 512 bytes
+	- O primeiro pacote tem de ser estendido para ocupar 512 bytes
 
 ## Implementações de Fast Ethernet
 - **100Base-Tx:** 2 cabos UTP - categoria 5

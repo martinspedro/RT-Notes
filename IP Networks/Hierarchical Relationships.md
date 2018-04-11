@@ -75,11 +75,11 @@ Portos mais conhecidos e tabelados internacionalmente.
 ### Comparação com o modelo cliente servidor: 
 - Se a rede for muito grande, é mau porque uma rede peer-to-peer não tem nenhum servidor estável
 - A probabilidade de existir um problema na rede aumenta
-- Num serviço http, a ligação entre o cliente e o servidor é muito mais estável;
+- Num serviço HTTP, a ligação entre o cliente e o servidor é muito mais estável;
 - Exemplos: 
 	- torrent
 		- download efetuada entre múltiplos utilizadores
-	- http:
+	- HTTP:
 		- apenas uma `source` (servidor)
 
 

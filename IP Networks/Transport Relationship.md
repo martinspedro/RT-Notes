@@ -33,7 +33,7 @@ A informação que foi enviada **não possui relação nenhuma entre si**:
 		- torrents
 		- ligação entre duas entidades, no geral
 	- modelo cliente-servidor
-		- _request http_: aceder a um website
+		- _request HTTP_: aceder a um website
 
 
 

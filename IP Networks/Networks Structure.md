@@ -6,7 +6,8 @@
 	- malhas de routers interligados
 		- normalmente, por fibra ótica
 	- cria uma _network_ de _networks_
-	- MPLS (Multi protocol label switching - circuitos virtuais sobre a uma camada física de links óticos)
+	- MPLS (Multi Protocol Label Switching)
+		- circuitos virtuais sobre a uma camada física de links óticos)
 - **Access Networks**
 	- Interliga diferentes áreas
 	- É o que o _network provider_ nos vende
@@ -67,7 +68,7 @@ A Internet funciona com base nos ganhos de multiplexagem. Leva à aplicação de
 > Mot the bitrate you have, but how long it takes you to have it
 
 - Representa o tempo que um pacote demora a atravessar a rede através dos vários nós até atingir o nó de destino
-- O tempo de acesso ao uplink depende da camada física
+- O tempo de acesso ao _uplink_ depende da camada física
 	- fibra melhor que ADSL
 
 ### Residential Networks
@@ -95,7 +96,7 @@ A Internet funciona com base nos ganhos de multiplexagem. Leva à aplicação de
 	- FDM: 50 kHz - 1 MHz para `downstream`
 		- 4 kHz - 50 kHz para `upstream`
 - Cable TV
-- HFC: Hybrid Fiber Coaxi
+- HFC: Hybrid Fiber Coaxial
 	- TV cabo
 	- também é possível transmitir dados pela rede
 - Wireless access networks

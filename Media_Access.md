@@ -7,7 +7,7 @@ São formadas principalmente por:
 - Ligações partilhadas
 
 
-![Rede de Telecomunicações. Os switchs estão representados a azul e as conexões partilhadas a verde. Os nós terminais são identificados a branco](pictures/communication_networks.png)
+![Rede de Telecomunicações. Os switches estão representados a azul e as conexões partilhadas a verde. Os nós terminais são identificados a branco](pictures/communication_networks.png)
 
 ## Ligações ponto a ponto
 As ligações ponto a ponto representam uma **ligação física** entre dois dispositivos.
@@ -20,7 +20,7 @@ Se tivermos N nós, iremos precisar de $\frac{N^2 - N}{2}$ conexões, o que para
 
 ![Evolução do número de ligações ponto a ponto necessárias em função do número de dispositivos](pictures/point_to_point_links.png)
 
-- Cada estação que é adicionada implica establecer mais $N - 1$ ligações novas, ou seja, todas as existentes.
+- Cada estação que é adicionada implica estabelecer mais $N - 1$ ligações novas, ou seja, todas as existentes.
 - Cada conexão necessita de um cabo e de $N -1 $ interfaces.
 - **Não é escalável**
 
@@ -39,7 +39,7 @@ Diferentes tipologias representam diferentes formas de **distribuir** e **partil
 4. `estrela`_(star)_
 
 ### Mesh
-Todos os nós estão ligados a todos os otros. Só é usada em redes de pequena dimensão, em que o número de nodos é reduzido.
+Todos os nós estão ligados a todos os outros. Só é usada em redes de pequena dimensão, em que o número de nodos é reduzido.
 
 Pela natureza do meio de comunicação, a rede wireless é `mesh`
 
@@ -78,7 +78,7 @@ Em ligações físicas por cabo/fibra, é usada redes com 4 a 6 nós, principalm
 		- Terminamos a rede da primeira interface
 		- vemos se funciona
 	- Vamos de computador em computador, terminal em terminal até descobrir o problema
-		- não posso usar dividão binária
+		- não posso usar divisão binária
 
 ![Diagrama de uma rede do tipo _bus_](pictures/bus_network.png)
 
@@ -107,7 +107,7 @@ Em ligações físicas por cabo/fibra, é usada redes com 4 a 6 nós, principalm
 ### Star network
 - Todas as conexões são de 1 para 1, ou seja, ponto a ponto
 - Qualquer problema que ocorra na rede é sempre local
-	- Exlcuindo os problemas que afetem o hub
+	- Excluindo os problemas que afetem o hub
 	- Se o hub morre, a rede morre
 	- Se um cabo tiver problemas, só o cliente desse cabo é que sofre
 - Implica usar um cabo por máquina, $N$
@@ -124,7 +124,7 @@ Em ligações físicas por cabo/fibra, é usada redes com 4 a 6 nós, principalm
 - Não existem falhas na rede sempre que um dos terminais é desconectado
 - Fácil identificar falhas
 	- Fácil remover elementos com falhas da rede
-- Melhor perfomance que um bus
+- Melhor performance que um bus
 
 **Desvantagens:**
 
@@ -165,32 +165,32 @@ Em ligações físicas por cabo/fibra, é usada redes com 4 a 6 nós, principalm
 
 
 # Shared Media
-- Múlitplos emissores e recetores partilham o mesmo canal de transmissão
+- Múltiplos emissores e receptores partilham o mesmo canal de transmissão
 - Existe **competição** pelo acesso ao meio
 	- Não podem ser transmitidos no mesmo cabo dois pacotes ao mesmo tempo
-	- É necessário existir coordenação entre os vários nós (tanto emissores como recetores)
+	- É necessário existir coordenação entre os vários nós (tanto emissores como receptores)
 - Requer mecanismos de **acesso múltiplo**
 
 
 - classrooms:
 	- a student raised the arm
 	- the teacher decides
-	- central control mechanis,
+	- central control mechanisms
 
 
 ## ALOHA [^1]
 - Sistema de transmissão de pacotes de rádio
-- Cada estação trasmite e recebe em diferentes frequências
+- Cada estação transmite e recebe em diferentes frequências
 - As estações transmitem **assim que possuam um pacote para enviar**, **independentemente do estado do canal**
 	- Ocorrem colisões quando duas ou mais estações transmitem ao mesmo tempo
 
 
-**Mecanismo de deteção e correção de colisões**
+**Mecanismo de detecção e correção de colisões**
 
 1. O emissor coloca a mensagem no meio partilhado
-2. Se o recetor receber a mensagem corretamente, envia um `ACK`, indicando ao emissor que a mensagem foi corretamente recebida
-3. Se após o intervalo de tempo o emissor	não receber o `ACK` do recetor (`timeout`), o emissor repete a transmissão do pacote
-	- O `timeout` deve ser maior que o dobro do tempo de propagação (`round-trip delay`), para garantir que o pacote tem tempo para chegar ao recetor e o emissor tem tempo de receber o `ACK`
+2. Se o receptor receber a mensagem corretamente, envia um `ACK`, indicando ao emissor que a mensagem foi corretamente recebida
+3. Se após o intervalo de tempo o emissor	não receber o `ACK` do receptor (`timeout`), o emissor repete a transmissão do pacote
+	- O `timeout` deve ser maior que o dobro do tempo de propagação (`round-trip delay`), para garantir que o pacote tem tempo para chegar ao receptor e o emissor tem tempo de receber o `ACK`
 4. A retransmissão é efetuada após o emissor esperar um tempo aleatório, depois de ocorrer o `timeout`, 
 	- Ao usar um tempo aleatório, a probabilidade de ocorrerem colisões repetidas é diminuída
 
@@ -200,12 +200,12 @@ Em ligações físicas por cabo/fibra, é usada redes com 4 a 6 nós, principalm
 O tempo de `timeout` tem de ser cuidadosamente escolhido:
 
 - Demasiado lento: podem ocorrer situações em que o meio esteja sem uso, criando _delays_
-- Demasiado rápido: o recetor pode não ter tempo para receber e enviar um `ACK`
+- Demasiado rápido: o receptor pode não ter tempo para receber e enviar um `ACK`
 
 
-A política de resolução das colisões é a **retransmissão**. Numa rede com taxas de ocupação elevadas, a perfromancedeteriora-se, limitando a comunicação a um máximo de $\approx 20 \%$, devido aos mecanismos de colisão e retransmissão
+A política de resolução das colisões é a **retransmissão**. Numa rede com taxas de ocupação elevadas, a performance deteriora-se, limitando a comunicação a um máximo de $\approx 20 \%$, devido aos mecanismos de colisão e retransmissão
 
-[^1]: Desenvolvido na Universidade do Hawai, para comunicar entre as ilhas
+[^1]: Desenvolvido na Universidade do Hawaii, para comunicar entre as ilhas
 
 ### Performance
 Se considerarmos `g` a taxa máxima de transmissão de pacotes que o canal consegue suportar, então temos de garantir que $g > \lambda$, onde $\lambda$ é o número total de pacotes a transmitir. Esta condição garante que é possível retransmitir pacotes, devido às colisões ocorridas.
@@ -228,13 +228,13 @@ Uma estação só começa a transmitir se detetar que o meio está livre. O obje
 
 As colisões não são impedidas porque as estações estão separadas uma das outras, e portanto no mesmo instante duas estações podem começar a transmitir, se ambas virem o canal como desocupado. 
 
-O tempo de propagação entre as estações faz com que estas não saibam se já existe outra ou não a transmitir/iniciar a transmissão. Assim, quando uma estação deteta qe o meio está livre apenas deteta que não existe nenhum mensagem a chegar/passar por si.
+O tempo de propagação entre as estações faz com que estas não saibam se já existe outra ou não a transmitir/iniciar a transmissão. Assim, quando uma estação deteta que o meio está livre apenas deteta que não existe nenhum mensagem a chegar/passar por si.
 
 
 ![Diagrama de uma rede CSMA. A distância entre as várias estações impõe um tempo de propagação entre elas, que pode resultar em colisões. Na figura, quando a estação 1 começa a transmitir, são necessários $\tau_1$ segundos até que essa transmissão seja detetada pela segunda estação, que também começou a transmitir nesse intervalo de tempo.](pictures/csma_diagram.png)
 
 ### Collision Detection
-A deteção de colisões permitir que mal seja detetada uma colisão, o emissor que a detetou para imediatamente a transmissão, para se puder retomar a transmissão de um pacote de cada vez
+A detecção de colisões permitir que mal seja detetada uma colisão, o emissor que a detetou para imediatamente a transmissão, para se puder retomar a transmissão de um pacote de cada vez
 
 ![Diagrama da linha numa transmissão - pt1](pictures/csma_channel_pt1.png)
 
@@ -248,7 +248,7 @@ A deteção de colisões permitir que mal seja detetada uma colisão, o emissor 
 
 - Devido a `round-trip delay`, para ser possível detetar uma colisão é necessário que a estação ainda esteja a transmitir após $$t_{min_{TX}} = 2 \times round\ trip\ delay$$
 - É preciso que o emissor ainda esteja a emitir $2 \times round\ trip\ delay$. Assim, a informação mínima que têm de ser enviada para puder ser detetada uma colisão tem de representar $2 \tau$.
-- O tempo máximo de propagação é entre os dois extermos da rede
+- O tempo máximo de propagação é entre os dois extremos da rede
 
  
 ### Performance
@@ -290,7 +290,7 @@ onde $a = \frac{t}{T}$ e T representa o tempo de transmissão de um pacote. Sabe
 	5. Espero o delay e de seguida envio
 		- Se tiver uma colisão, duplico a minha _pool_ de números de `time-slots`
 		- Se tiver uma transmissão bem sucedida, reduzo para metade a _pool_ de números de `time-slots`
-	6. Volot a repetir o número 1, com as novas especificações para o tamanho da pool
+	6. Volto a repetir o número 1, com as novas especificações para o tamanho da pool
 - O número de `slots` de espera para a N-enésima tentativa é dado por uma variável aleatória distribuída uniformemente na gama de valores:
 	$$ 0 \leq r < 2^k, k = min(N, 10)$$
 	- onde `N` é o número de tentativas e `k` é o número de tempos de espera para transmitir
@@ -367,7 +367,7 @@ Quando uma estação possui um pacote pronto a transmitir, **espera** pela **rec
 
 Uma rede `token ring` possui um tempo de espera determinístico. No máximo, o tempo de espera será 
 $$N \times (tempo\ máximo\ da\ mensagem + tempo\ de\ passagem\ do\ token)$$
-onde N são o número de estações exisitentes
+onde N são o número de estações existentes
 
 Existe uma estação responsável por **monitorizar** a rede `active monitor`. As suas principais funcionalidades são:
 
@@ -378,18 +378,18 @@ Existe uma estação responsável por **monitorizar** a rede `active monitor`. A
 - Detetar ausência de `token` na rede
 	- A **estação monitora** mantêm um `timer`
 	- Sempre que o `token` passa pela estação, o `timer` sobre um reset
-	- Se o `timer` esgotar o seu intervalo de contagam, um novo `token` é introduzido no anel
+	- Se o `timer` esgotar o seu intervalo de contagem, um novo `token` é introduzido no anel
 - Detetar se existe algum monitor no `ring`:
 	- envia periodicamente uma `frame`: `active-monitor-present`
 	- Cada estação mantém um `timer` 
 		- atualizado/reset cada vez que um `frame` é recebido
 	- O monitor pode ser qualquer uma das estações
-	- Quando o `timer` expira, occorre processo para eleger um novo monitor
+	- Quando o `timer` expira, ocorre processo para eleger um novo monitor
 		- É escolhida a estação com maior endereço
 
 No `Token Ring`, tudo é baseado em `timers`
 
-- Se este tipo de sinalização não aparecer, alguma estação toma  ainiciativa
+- Se este tipo de sinalização não aparecer, alguma estação toma a iniciativa
 - É escolhido com base no endereço da máquina
 
 
@@ -420,7 +420,7 @@ Protocolo Ethernet IEEE 802.3
 ### Vantagens do _Token-Ring_
 1. Se a rede estiver com bastante ocupada, o `token` introduz na rede uma política de acesso `round-robin`
 	- Garante eficiência e justiça no acesso ao meio
-	- Na Ethernet, com demasiada carga na rede, a utilização e acesso ao meio pelas estações é ineficiente devido ao elevado número de colisões netre pacotes
+	- Na Ethernet, com demasiada carga na rede, a utilização e acesso ao meio pelas estações é ineficiente devido ao elevado número de colisões entre pacotes
 
 # Ethernet Evolution
 
@@ -430,10 +430,10 @@ Protocolo Ethernet IEEE 802.3
 - Primeira tecnologia Ethernet
 - Taxa de transmissão: 10 Mb/s
 - Cabo coaxial grosso, $75 \Omega$ (_thick Ethernet_)
-	- geralemnte amarelo
+	- geralmente amarelo
 - Comprimento máximo do cabo = 500 m
-- As estações conectavma-se á rede através de um _ransceiver_
-- A interfacece entre as estações e o respetivo _ttransceiver_ é efetuada usando uma `AUI`
+- As estações conectavam-se à rede através de um _transceiver_
+- A interface entre as estações e o respetivo _transceiver_ é efetuada usando uma `AUI`
 	 - `AUI`: Attachment Unit Interface
 	 - Um cabo `AUI` podia ter no máximo um comprimento de 50 m
 	 - A distância entre estações devia ser um múltiplo de 2.5m, para **evitar reflexões**
@@ -442,11 +442,11 @@ Protocolo Ethernet IEEE 802.3
 ![Diagrama de uma rede Ethernet 10Base5](pictures/ethernet_10Base5.png)
 
 ### Limitações
-Através da imagem \label{ethernet_transmission}, temos de garantir que todos os transmissores conseguem detetar colisões entre dois ou mais pacotes na rede. Isto impõe um **tamanho mínimo ao pacote**.
+Através da imagem \label{Ethernet_transmission}, temos de garantir que todos os transmissores conseguem detetar colisões entre dois ou mais pacotes na rede. Isto impõe um **tamanho mínimo ao pacote**.
 
-![Diagrama temporal de uma transimssão \label{ethernet_transmission}](pictures/ethernet_10Base5_collision_timing.png)
+![Diagrama temporal de uma transmissão \label{Ethernet_transmission}](pictures/ethernet_10Base5_collision_timing.png)
 
-Para a configuração máxima, apresentada na figura \label{ethernet_10Base5_network}, usando cabos com o comprimento máximo de 50 m, e tendo em conta que o `round-trip delay` é de $52 \mu s$, podemos concluir que:
+Para a configuração máxima, apresentada na figura \label{Ethernet_10Base5_network}, usando cabos com o comprimento máximo de 50 m, e tendo em conta que o `round-trip delay` é de $52 \mu s$, podemos concluir que:
 
 - o tamanho mínimo do pacote a ser transmitido possui 64 bytes
 	- se o pacote possui menos dados $\implies$ _padding_ com '0'
@@ -454,14 +454,14 @@ Para a configuração máxima, apresentada na figura \label{ethernet_10Base5_net
 	- **5 segmentos de cabo**
 	- **4 repetidores**
 
-![Diagrama de uma rede Ethernet 10Base5, para uma rede com a dimensão máxima \label{ethernet_10Base5_network}](pictures/ethernet_10Base5_network.png)
+![Diagrama de uma rede Ethernet 10Base5, para uma rede com a dimensão máxima \label{Ethernet_10Base5_network}](pictures/ethernet_10Base5_network.png)
 
 
 ## 10Base2
 - Taxa de transmissão: 10 Mb/s
 - Cabo coaxial fino, $50 \Omega$ (_thin Ethernet_)
 - Comprimento máximo do cabo = 185 m
-- As estações conectavma-se á rede/cabo através de um conector BNC
+- As estações conectavam-se á rede/cabo através de um conector BNC
 	 - A distância mínima entre devia ser 0.5m, para **evitar reflexões**
 - O número máximo de estações permitidas por segmento são são 30
 - Os segmentos tinham de ser interligados por um repetidor
@@ -473,7 +473,7 @@ Para a configuração máxima, apresentada na figura \label{ethernet_10Base5_net
 ## 10BaseT
 - Primeiro protocolo estruturado
 - Taxa de transmissão: 10 Mb/s
-- Twisted Pair Winding (Cabo entraçado)
+- Twisted Pair Winding (Cabo entrançado)
 	- Pode ser `UTP` ou `STP`
 		- `UTP`: Unshielded Twisted Pair
 		- `STP`: Shielded Twisted Pair
@@ -500,16 +500,16 @@ Para a configuração máxima, apresentada na figura \label{ethernet_10Base5_net
 
 
 #### Terminal Equipment
-![Conector R-45, usado para ligar equipamento terminal](pictures/rj45_terminal_equipment.png)
+![Conector RJ-45, usado para ligar equipamento terminal](pictures/rj45_terminal_equipment.png)
 
-- Equipamento terminal são pcs ou routers
+- Equipamento terminal são PCs ou routers
 - **Pinos transmissão:** 1 e 2
-- **Pinos receção:** 3 e 6 
+- **Pinos recepção:** 3 e 6 
 
 #### Network Equipment
 ![Conector R-45, usado para ligar equipamento da rede](pictures/rj45_network_equipment.png)
 
-- Equipamento da rede são hubs e switchs
+- Equipamento da rede são hubs e switches
 - **Pinos transmissão:** 3 e 6
 - **Pinos receção:** 1 e 2 
 
@@ -520,7 +520,7 @@ Para a configuração máxima, apresentada na figura \label{ethernet_10Base5_net
 	- **Par #2:** Branco/Laranja + Laranja
 	- **Par #3:** Branco/Verde + Verde
 	- **Par #4:** Branco/ Castanho + Castanho
--  10BaseT apenas usa os **pares 2 e 3 (laraja e verde)**
+-  10BaseT apenas usa os **pares 2 e 3 (laranja e verde)**
 	- **Par #2** é ligado aos pinos **1** e **2**
 		- Pino 1: Branco/Laranja
 		- Pino 2: Laranja
@@ -539,19 +539,19 @@ Para a configuração máxima, apresentada na figura \label{ethernet_10Base5_net
 Categoria  Descrição
 --------- ---------------------------------------------
 1          Apenas voz (cabo telefónico)
-2          Dados até 4 Mb/s (LocalTalk)
+2          Dados até 4 Mb/s (Local Talk)
 3          Dados até 10 Mb/s (Ethernet)
 4          Dados até 20 Mb/s (16 Mbps Token Ring)
 5 (a/e)    Dados até 100 Mb/s (Fast Ethernet)
-6 (a)      Dados até 1Gb/s (ou 10Gb/s) (GigabitEthernet)
+6 (a)      Dados até 1Gb/s (ou 10Gb/s) (Gigabit Ethernet)
 
 
 #### Direto vs Cruzado
-![Um cabo direto é utilizado para ligar equipamento de diferentes tipologias, ou seja, equipqmento terminal a equipamento de rede e vice-versa](pictures/utp_direct_cable.png)
+![Um cabo direto é utilizado para ligar equipamento de diferentes tipologias, ou seja, equipamento terminal a equipamento de rede e vice-versa](pictures/utp_direct_cable.png)
 
 ![Um cabo cruzado é utilizado para ligar equipamento da mesma tipologia, ou seja, equipamento terminal a equipamento de terminal ou equipamento de rede a equipamento de rede](pictures/utp_cross_cable.png)
 
-Ao usar um cabo cruzado, o pinout deve mudar em **apenas uma das portas**
+Ao usar um cabo cruzado, o _pinout_ deve mudar em **apenas uma das portas**
 
 - Par #2 é ligado aos pinos 1 e 2:
 	- Pino 1: Branco/Verde
@@ -560,12 +560,12 @@ Ao usar um cabo cruzado, o pinout deve mudar em **apenas uma das portas**
 	- Pino 3: Branco/Laranja
 	- Pino 6: Laranja
 
-Atualmente os dispositivos conseguem fazer o switch interno e perceber se foram ligados com um cabo direto ou cruzao.
+Atualmente os dispositivos conseguem fazer o switch interno e perceber se foram ligados com um cabo direto ou cruzado.
 
 ## Categorias da Ethernet tradicional
 Em resumo:
 
-![Diagrama das categorias tradcionais da Ethernet](pictures/ethernet_categories_diagram.png)
+![Diagrama das categorias tradicionais da Ethernet](pictures/ethernet_categories_diagram.png)
 # Conexões entre hubs
 
 ## Cascata
@@ -610,7 +610,7 @@ Gigabit Ethernet (10 Gb/s) $\rightarrow$ reduzir o tamanho da rede e aumentar o 
 - Os octetos nos campos protocolo deixaram de ser apenas octetos (mais bits)
 - Os pacotes mais pequenos sofrem extensão da `carrier`
 - Quando vários pacotes pequenos precisam de ser transmitidos, podem ser transmitidos `back-to-back`
-	- O primeiro pacote tem de ser extendido para ocupar 512 bytes
+	- O primeiro pacote tem de ser estendido para ocupar 512 bytes
 
 ## Implementações de Fast Ethernet
 - **100Base-Tx:** 2 cabos UTP - categoria 5
@@ -635,14 +635,14 @@ No IEEE 802, a camada de ligação lógica (nível 2) está dividida em 2 camada
 - Responsável pela formação das tramas
 	- Endereço de origem 
 	- Endereço de destino
-	- Deteção de erros
-- Deteção e Receção das tramas
+	- Detecção de erros
+- Detecção e Receção das tramas
 - Controlo de acesso ao meio
 	- protocolo CSMA/CD
 
 
 ## LLC
-- multiplexagem de fluxos de diferentes serviços da camanda protocolar superior
+- multiplexagem de fluxos de diferentes serviços da camada protocolar superior
 - Contém os campos:
 	- `DSAP`: _Destination Service Access Point_
 		- Identifica o serviço na estação de destino a que se destina a trama

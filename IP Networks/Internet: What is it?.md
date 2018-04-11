@@ -2,7 +2,7 @@
 A Internet é uma rede **aproximadamente hierárquica**. Pode ser vista como uma **"rede de redes"**, que permite a ligação entre várias redes, que podem conter características muito diferentes. 
 
 
-É consituída por um conjunto de dispositivos ligados entre si, que hierarquicamente podem ser:
+É constituída por um conjunto de dispositivos ligados entre si, que hierarquicamente podem ser:
 
 - `hosts`
 - `terminal systems`

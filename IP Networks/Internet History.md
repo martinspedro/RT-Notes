@@ -1,6 +1,6 @@
 # Breve História da Internet
 - Começou por ser uma experiência no meio académico no final da década de 60
-- Inicialmente ARPANET, depois NSFnet e agora, "ANYBODYSNET"
+- Inicialmente ARPANET, depois NSFnet e agora, _"ANYBODYSNET"_
 	- Não é proprietária
 - Não é detida por uma única entidade
 	- Existem vários serviços a providenciar:
@@ -68,7 +68,7 @@ Funciona com base em `RFC` - Request For Comments. Sempre que se quer acrescenta
 	- **IANA** _(Internet Assigned Number Authority)_
 		- Responsável pela gestão dos:
 			- DNS
-			- domínios TLD (top level domains)
+			- domínios TLD (Top Level Domains)
 
 
 As conexões entre a Internet Tree não é hierárquica

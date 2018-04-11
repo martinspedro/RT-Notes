@@ -9,14 +9,14 @@ No IEEE 802, a camada de ligação lógica (nível 2) está dividida em 2 camada
 - Responsável pela formação das tramas
 	- Endereço de origem 
 	- Endereço de destino
-	- Deteção de erros
-- Deteção e Receção das tramas
+	- Detecção de erros
+- Detecção e Receção das tramas
 - Controlo de acesso ao meio
 	- protocolo CSMA/CD
 
 
 ## LLC
-- multiplexagem de fluxos de diferentes serviços da camanda protocolar superior
+- multiplexagem de fluxos de diferentes serviços da camada protocolar superior
 - Contém os campos:
 	- `DSAP`: _Destination Service Access Point_
 		- Identifica o serviço na estação de destino a que se destina a trama

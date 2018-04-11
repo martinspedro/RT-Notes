@@ -56,7 +56,7 @@ A maior parte das comunicações hoje em dia são assimétricas
 - As conexões têm se vindo a tornar mais simétricas desde que a quantidade de conexões `peer to peer` aumentou
 - Tipicamente, existe mais informação a circular de um lado para o outro do que ao contrário
 	- O tráfego de download é superior ao de upload
-	- Daí que as velocidades de downlink e uplink sejam diferentes
+	- Daí que as velocidades de _downlink_ e _uplink_ sejam diferentes
 - Conexões assimétricas: `client-server model`
 - Conexões simétricas: `peer-to-peer model`
 	- Exemplos: chamadas 

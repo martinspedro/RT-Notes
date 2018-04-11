@@ -3,7 +3,7 @@ Numa rede de comunicações precisamos de saber:
 
 - Quantas pessoas/dispositivos estão conectados num mesmo instante de tempo
 - Se os dispositivos estão a falar diretamente entre eles ou com uma entidade hierarquicamente acima deles na rede
-- Como é que a informação é enviada, i.e, o quer torna:
+- Como é que a informação é enviada, i.e., o quer torna:
 	 - um email num email
 	 - uma mensagem numa mensagem
 	 - um ficheiro num ficheiro
