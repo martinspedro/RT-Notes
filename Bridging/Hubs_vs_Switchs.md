@@ -16,6 +16,11 @@
 - A largura de banda agregada é limitada pela taxa de transmissão da LAN
 - Os bits vão sendo transmitidos à medida que vão chegando
 - A bitrate é partilhada globalmente
+- Opera no nível físico
+- Regenera os sinais
+- Um `hub` é um repetidor com múltiplas portas
+- Pode fazer a conversão entre meios físicos de propagação do sinal
+	- e.g., elétrico <-> ótico
 
 ![Exemplo de rede com Hub em estrela](../pictures/hub_network_example.png)
 
@@ -37,6 +42,10 @@
 - Mais complexos que os `repeaters`/`hubs`
 - Um switch é uma `bridge` _multiple port_  
 - Um switch possui a noção de estados
+- Tipo `store-and-forward`
+- Opera ao nível da camada da ligação (camada 2)
+- Interliga dois ou mais domínios de colisões
+- Comuta com base nos endereços MAC
 
 ![Exemplo de rede com Hub em estrela](../pictures/switch_network_example.png)
 
