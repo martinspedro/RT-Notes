@@ -377,7 +377,7 @@ Existe uma estação responsável por **monitorizar** a rede `active monitor`. A
 	 - Pode ocorrer se o emissor enviar um pacote e em seguida "desaparecer" da rede
 - Detetar ausência de `token` na rede
 	- A **estação monitora** mantêm um `timer`
-	- Sempre que o `token` passa pela estação, o `timer` sobre um reset
+	- Sempre que o `token` passa pela estação, o `timer` sofre um reset
 	- Se o `timer` esgotar o seu intervalo de contagem, um novo `token` é introduzido no anel
 - Detetar se existe algum monitor no `ring`:
 	- envia periodicamente uma `frame`: `active-monitor-present`
