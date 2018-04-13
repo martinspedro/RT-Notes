@@ -1,0 +1,22 @@
+digraph graph1 {
+	node [shape=circle]
+	{rank=same; "B"; "D";}
+	{rank=same; "A"; "F";}
+	{rank=same; "C"; "E";}
+
+	"A" -> "C" [label=4, dir=both]
+	"C" -> "E" [label=1]
+	"E" -> "F" [label=4, dir=both]
+	"F" -> "D" [label=2]
+	"D" -> "B" [label=3, dir=both]
+	"B" -> "A" [label=1]
+	"E" -> "B" [label=1]
+	"D" -> "E" [label=1]
+
+	"A" [xlabel=0]
+	"B" [xlabel=1]	
+	"C" [xlabel=3]	
+	"D" [xlabel=3]	
+	"E" [xlabel=2]	
+	"F" [xlabel=5]	
+}	
