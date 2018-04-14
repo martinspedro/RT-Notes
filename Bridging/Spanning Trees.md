@@ -6,7 +6,7 @@ header-includes:
 	- \usepackage{amsmath}
 	- \usepackage{arcs}
 ...
-## Spanning tree
+# Spanning tree
 - **Objetivo:** Numa rede que pode ter ligações redundantes entre switches, escolher que portas usar para efetuar as ligações entre várias LANs
 
 ![Exemplo do funcionamento de uma rede com Spanning Tree ativo](../pictures/spanning_tree_mechanism.png)
@@ -74,20 +74,7 @@ A `spanning tree` procura o camninho mais curto, não o mais estável.
 - por vezes o caminho mais curto não é o mais estável
 - não é objetivo do SPT, (Spawning tree protocolo) descobrir o cmninhos mais rápido
 
-#### Exemplo de Mudança
-1. Uma porta passa ao estado blocking
-2. A bridge que perdeu conectividade envia um TCN 
-3. A partir desse momento, a bridge acima recebeu o TCN 
-4. Envia um TCA - Topology CHange Ack para a outra bridge, a informar que já sabe que a ligação não existe
-5. Envia um TCN na sua root port para outra bridge
-6. O processo repete-se até chegar à raiz da rede
-7. A raiz envia um BPDU com um TC - Toplogy Change
-8. Os bridges mudam o timeout de reconfiguração
-9. A reconfiguração aocntece
-10. As spanning trees são atualizadas
-
-
-### Protocolos
+## Protocolos
 - 802.1p
 	- permite mapear nos bit da ethernet prioridades
 - 802.1w
@@ -204,5 +191,18 @@ As **portas ativas** em cada bridge são a **porta raiz** e as **portas designad
 ![Ligações numa rede antes de as portas `blocking` serem removidas](../pictures/spanning_tree_bridge_connections_1.png)
 
 ![Ligações numa rede após as portas `blocking` terem sido removidas](../pictures/spanning_tree_bridge_connections_2.png)
+
+
+### Exemplo de Mudança
+1. Uma porta passa ao estado blocking
+2. A bridge que perdeu conectividade envia um TCN 
+3. A partir desse momento, a bridge acima recebeu o TCN 
+4. Envia um TCA - Topology CHange Ack para a outra bridge, a informar que já sabe que a ligação não existe
+5. Envia um TCN na sua root port para outra bridge
+6. O processo repete-se até chegar à raiz da rede
+7. A raiz envia um BPDU com um TC - Toplogy Change
+8. Os bridges mudam o timeout de reconfiguração
+9. A reconfiguração aocntece
+10. As spanning trees são atualizadas
 
 
