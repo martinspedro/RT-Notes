@@ -6,6 +6,7 @@ A collection of useful notes and PDFs for the [Redes e Telecomunicações course
 - _[version 0.2]_ [IP Networks](https://github.com/k3rn3l-pan1c/RT-Notes/raw/master/pdf/IP_Networks.pdf)
 - _[version 0.2]_ [Addressing](https://github.com/k3rn3l-pan1c/RT-Notes/raw/master/pdf/Addressing.pdf)
 - _[version 0.1]_ [Media Access](https://github.com/k3rn3l-pan1c/RT-Notes/raw/master/pdf/Media_Access.pdf)
+- _[version 0.1]_ [Bridging](https://github.com/k3rn3l-pan1c/RT-Notes/raw/master/pdf/Bridging.pdf)
 
 ## Note taking process
 1. Notes are taken using pandoc markdown extended syntax
@@ -36,7 +37,7 @@ For more information, check out [this amazing guide](https://www.google.pt/url?s
 To ease the publish of an eye-candy PDF:
 
 ```bash
-./logbook -p <notes.md>
+logbook -p <notes.md>
 ```
 
 To use more advanced directives while publishing to PDF, the script looks for a yaml metadata file in the `metadata` folder. If no metadata file is provided, the script uses the default directives.
@@ -57,10 +58,11 @@ This raw notes were later improved and filtered using as scientific reference th
 - [X] IP Networks
 - [X] Addressing
 - [X] Media Access
-- [ ] Bridging
+- [X] Bridging
 - [ ] Flow Control
 - [ ] IP Protocol
 - [ ] Routing
+- [ ] Transport Layer (TCP & UDP)
 
 ## License
 The content of this project itself is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/) and the underlying source code is under the [MIT license](https://opensource.org/licenses/mit-license.php).
