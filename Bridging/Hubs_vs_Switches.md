@@ -99,9 +99,9 @@ Quando uma bridge recebe uma trama MAC numa porta de entrada:
 
 
 #### Tabela de Encaminhamento
-endereço MAC  interface  tempo de vida
------------- ---------- ---------------
-   -              -          -
+endereço MAC    interface   tempo de vida
+-------------  ----------- ---------------
+   ...            ...          ...
 
 
 : Exemplo da organização das tabelas de encaminhamento nos switches
