@@ -12,3 +12,6 @@
 ![](pictures/question_bridges_1.png)
 
 ![](pictures/question_bridges_2.png)
+
+![](pictures/spanning_tree_exercise.png)
+
