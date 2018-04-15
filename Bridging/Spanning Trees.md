@@ -72,8 +72,8 @@ A `spanning tree` procura o camninho mais curto, não o mais estável.
 Quando os custos das ligações são não-negativos, temos:
 
 \begin{align*}
-Comprimento do percurso mínimo de um nó X para A & = Comprimento mínimo de X até ao nó que liga esse nó ao nó A \\
-																 & + Comprimento do percurso minimo desse nó para A
+Comprimento\ do\ percurso\ mínimo\ de\ um\ nó\ X\ para\ A & = Comprimento\ mínimo\ de\ X\ até\ ao\ nó\ que\ liga\ esse\ nó\ ao\ nó\ A\ \\
+																 & +\ Comprimento\ do\ percurso\ minimo\ desse\ nó\ para\ A
 \end{align*}																 
 
 O algoritmo de Bellman-Ford caracteriza-se por ser:

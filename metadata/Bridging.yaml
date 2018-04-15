@@ -42,6 +42,5 @@ header-includes:
   - \usepackage{subfig}
   - \usepackage{graphicx}
   - \usepackage{amsmath}
-  - \usepackage{arcs}
 ...
 
