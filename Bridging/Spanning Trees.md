@@ -1,11 +1,3 @@
----
-header-includes:
-	- \usepackage{float}
-	- \usepackage{subfig}
-	- \usepackage{graphicx}
-	- \usepackage{amsmath}
-	- \usepackage{arcs}
-...
 # Spanning tree
 - **Objetivo:** Numa rede que pode ter ligações redundantes entre switches, escolher que portas usar para efetuar as ligações entre várias LANs
 
@@ -167,7 +159,7 @@ O algoritmo de Bellman-Ford caracteriza-se por ser:
 
 Cada bridge tem associado a si um **custo do percurso para a raiz (`Root Path Cost`)** igual à soma dos custos das portas que recebem pacotes enviados pela raiz (portas raiz) no percurso de menor custo para a bridge. Ver figura \ref{root_path_cost}.
 
-![label{root_path_cost} Exemplo de custo para a raiz](../pictures/root_path_cost)
+![label{root_path_cost} Exemplo de custo para a raiz](../pictures/root_path_cost.png)
 
 As **portas ativas** em cada bridge são a **porta raiz** e as **portas designadas**. As restantes portas estão **inativas** _(blocking)_
 

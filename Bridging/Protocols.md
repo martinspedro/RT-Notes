@@ -28,7 +28,7 @@ Prioridade  Descrição
 - Mais informação: [Understanding Rapid Spanning Tree Protocol (802.1w)](http://www.cisco.com/warp/public/473/146.html)
 
 
-![Pacote de configuração BPDU](../pictures/configuration_bpdu)
+![Pacote de configuração BPDU](../pictures/configuration_bpdu.png)
 
 ### 802.1s - Multiple Spanning Tree Protocol
 - O STP e RSTP não reconhecem VLANS

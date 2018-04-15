@@ -29,5 +29,5 @@ Existem dois tempos de vida usado:
 
 
 #### Exemplo de uma spanning tree ineficiente
-![Exemplo de uma spanning tree ineficiente](../pictures/spanning_tree_inneficient)
+![Exemplo de uma spanning tree ineficiente](../pictures/spanning_tree_inneficient.png)
 
