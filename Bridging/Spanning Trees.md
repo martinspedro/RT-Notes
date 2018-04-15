@@ -74,23 +74,6 @@ A `spanning tree` procura o camninho mais curto, não o mais estável.
 - por vezes o caminho mais curto não é o mais estável
 - não é objetivo do SPT, (Spawning tree protocolo) descobrir o cmninhos mais rápido
 
-## Protocolos
-- 802.1p
-	- permite mapear nos bit da ethernet prioridades
-- 802.1w
-	- rapid spanning tree protocol
-	- Acelera o ponto de convergẽncia relativamente ao 802.1D
-	- bits entre o `topology change` e o `topology change adverstiment` que permite às bridges convergir mais rapidamente
-- 802.1s - Multiple Spanning Tree Protocol
-	- O STP e RSTP não reconhecem VLANS
-	- Primeiro é necessário estabelecer as spwanign tree
-	- Ao criar as VLANs fecho portas nas spanning trees
-	- Se existir tráfego nas VLANs não via haver problema
-	- Se as bridges não tiverem tráfego na altura de criação das VLANs, vamos ter problemas
-	- Uma vez que as VLANs estão separadas, não vai ser possível criar uma spannign tree unica
-	- este protocolo trata de criar as spwaning trees asssociadoas as vlans
-
-
 ## Bellman Equations
 ![Grafo com os custos de uma rede `spanning tree`](../pictures/bellman_equations_example_1.png)
 
