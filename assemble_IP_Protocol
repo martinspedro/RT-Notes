@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# Script to assemble all Media Access subchapters into a single chapter md file
+#
+
+chapter_name="IP_Protocol.md"
+folder_name="IP Protocol"
+
+cat "$folder_name/NAT.md"                         >  "$chapter_name"
+cat "$folder_name/NATP.md"                        >> "$chapter_name"
+
+# Replace Pictures directory (running at root dir)
+sed -i -e 's~../pictures~pictures~g' "$chapter_name"
+
