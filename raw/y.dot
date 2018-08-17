@@ -1,0 +1,14 @@
+digraph bellman_ford {
+rankdir=LR
+node [shape=circle]
+
+"X" -> "W" [label="2"]
+"X" -> "U" [label="5"]
+"X" -> "V" [label="1"]
+"X" -> "Y" [label="4"]
+"Y" -> "Z" [label="2"]
+"W" -> "Z" [label="1"]
+
+"U" -> "V" [label="3"]
+
+}
