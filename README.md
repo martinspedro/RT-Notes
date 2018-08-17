@@ -60,15 +60,17 @@ This raw notes were later improved and filtered using as scientific reference th
 - [X] Addressing
 - [X] Media Access
 - [X] Bridging
-- [ ] Flow Control
+- [ ] Flow and Error Control
 - [ ] IP Protocol
 	- [ ] IPv4
 	- [ ] IPv6
 	- [ ] ARP
 	- [ ] DHCP
+	- [X] NAT-NAPT
 - [ ] Routing
-- [ ] Transport Layer (TCP & UDP)
-- [X] NAT-NAPT
+- [ ] Transport Layer 
+	- [ ] UDP
+	- [ ] TCP
 - [ ] DNS
 - [ ] Performances Metrics in Networks
 - [ ] Applicattion Protocols 
